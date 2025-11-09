@@ -206,7 +206,7 @@ function App() {
         </div>
         <div className="trust-item">
           <div className="trust-number">☾</div>
-          <div className="trust-label">guided by the cosmos</div>
+          <div className="trust-label">2000+ year old techniques</div>
         </div>
       </section>
 
