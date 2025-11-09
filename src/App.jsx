@@ -414,7 +414,7 @@ function App() {
               Questions? Want to chat first? Just reach out.
             </p>
             <div className="contact-methods">
-              <a href="mailto:j.lietunovas@gmail.com.com" className="contact-link">
+              <a href="mailto:j.lietunovas@gmail.com" className="contact-link">
                 Email: j.lietunovas@gmail.com
               </a>
               <div className="social-links">
