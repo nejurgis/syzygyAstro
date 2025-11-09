@@ -141,7 +141,7 @@ function App() {
   const faqs = [
     {
       question: 'What do I need for a reading?',
-      answer: 'For most readings, you\'ll need your exact birth date, time, and location.'
+      answer: 'You\'ll need your exact birth date, time, and location.'
     },
     {
       question: 'How long does a reading take?',
@@ -153,11 +153,11 @@ function App() {
     },
     {
       question: 'What if I need to reschedule?',
-      answer: 'You can reschedule up to 24 hours before your appointment with no penalty. Cancellations within 24 hours receive a 50% credit toward a future session.'
+      answer: 'You can reschedule up to 24 hours before your appointment with no penalty. Cancellations within less than 24 hours receive a partial 50% refund.'
     },
     {
       question: 'Do you offer refunds?',
-      answer: 'If you\'re not completely satisfied with your reading, I offer a 100% money-back guarantee within 7 days of your session.'
+      answer: 'If you\'re not completely satisfied with your reading, I offer a 100% money-back guarantee within a day of your session.'
     },
     {
       question: 'Can astrology predict the future?',
