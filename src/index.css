@@ -5,13 +5,13 @@
 }
 
 :root {
-  font-family: 'Zalando Sans SemiExpanded', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   line-height: 1.6;
   font-weight: 400;
 
-  color-scheme: dark;
-  color: #E8E8E8;
-  background-color: #0A0A0A;
+  color-scheme: light;
+  color: #1A1A1A;
+  background-color: #FFFFFF;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -23,8 +23,8 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #0A0A0A;
-  color: #E8E8E8;
+  background-color: #FFFFFF;
+  color: #1A1A1A;
 }
 
 a {

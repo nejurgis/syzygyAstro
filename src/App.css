@@ -1,20 +1,20 @@
 /*
-Dark Theme Color Palette:
-- Pure Black: #000000
-- Soft Black: #0A0A0A (main background)
-- Dark Gray: #1A1A1A (card backgrounds)
-- Medium Gray: #2A2A2A (borders, subtle elements)
-- Warm Gold: #D4AF37 (accents, CTAs)
+Mystical Warm Color Palette:
+- Deep Night: #1A1F3A (dark celestial blue)
+- Royal Purple: #4A2C5F (mystical depth)
+- Cosmic Purple: #6B4984 (lighter purple accent)
+- Warm Gold: #D4AF37 (trust, wisdom)
 - Soft Gold: #E8C547 (highlights)
-- Light Text: #E8E8E8 (primary text)
-- White: #FFFFFF (headings)
-- Muted Text: #A0A0A0 (secondary text)
+- Cream: #FFF8E7 (warm backgrounds)
+- Warm White: #FFFBF5 (soft white)
+- Warm Gray: #7A6F6B (muted text)
+- Deep Plum: #2D1B4E (rich headers)
 */
 
 .astrology-page {
   min-height: 100vh;
-  background-color: #0A0A0A;
-  color: #E8E8E8;
+  background-color: #FFFBF5;
+  color: #2D1B4E;
 }
 
 /* Header */
@@ -24,10 +24,10 @@ Dark Theme Color Palette:
   left: 0;
   right: 0;
   padding: 30px 60px;
-  background: linear-gradient(to bottom, rgba(10, 10, 10, 0.98) 0%, rgba(26, 26, 26, 0.95) 100%);
+  background: linear-gradient(to bottom, rgba(255, 251, 245, 0.98) 0%, rgba(255, 248, 231, 0.95) 100%);
   backdrop-filter: blur(10px);
   z-index: 1000;
-  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.15);
   transition: all 0.3s ease;
 }
 
@@ -42,7 +42,7 @@ Dark Theme Color Palette:
 }
 
 .header-nav a {
-  color: #E8E8E8;
+  color: #4A2C5F;
   transition: all 0.3s ease;
   text-transform: lowercase;
   position: relative;
@@ -75,7 +75,7 @@ Dark Theme Color Palette:
   align-items: center;
   justify-content: center;
   padding: 140px 24px 60px;
-  background: linear-gradient(135deg, #000000 0%, #0A0A0A 50%, #1A1A1A 100%);
+  background: linear-gradient(135deg, #1A1F3A 0%, #2D1B4E 50%, #4A2C5F 100%);
   position: relative;
   overflow: hidden;
 }
@@ -141,7 +141,7 @@ Dark Theme Color Palette:
   font-size: 6.5rem;
   font-weight: 700;
   margin-bottom: 30px;
-  color: #FFFFFF;
+  color: #FFFBF5;
   line-height: 1;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
   letter-spacing: -1px;
@@ -159,7 +159,7 @@ Dark Theme Color Palette:
 
 .hero-description {
   font-size: 1.35rem;
-  color: rgba(232, 232, 232, 0.9);
+  color: rgba(255, 251, 245, 0.9);
   margin-bottom: 50px;
   line-height: 1.5;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
@@ -173,7 +173,7 @@ Dark Theme Color Palette:
   display: inline-block;
   padding: 20px 55px;
   background: linear-gradient(135deg, #D4AF37 0%, #E8C547 100%);
-  color: #000000;
+  color: #2D1B4E;
   font-size: 1rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -200,7 +200,7 @@ Dark Theme Color Palette:
 .guarantee-text {
   margin-top: 25px;
   font-size: 1rem;
-  color: rgba(160, 160, 160, 0.85);
+  color: rgba(255, 251, 245, 0.75);
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -208,7 +208,7 @@ Dark Theme Color Palette:
 
 /* Trust Bar */
 .trust-bar {
-  background: linear-gradient(to bottom, #0A0A0A 0%, #1A1A1A 100%);
+  background: linear-gradient(to bottom, #FFF8E7 0%, #FFFBF5 100%);
   padding: 50px 24px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -226,7 +226,7 @@ Dark Theme Color Palette:
 .trust-number {
   font-size: 5rem;
   font-weight: 700;
-  color: #D0D0D0;
+  color: #6B4984;
   margin-bottom: 15px;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
   letter-spacing: -2px;
@@ -235,7 +235,7 @@ Dark Theme Color Palette:
 
 .trust-label {
   font-size: 1.1rem;
-  color: #A0A0A0;
+  color: #7A6F6B;
   text-transform: lowercase;
   letter-spacing: 0px;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
@@ -258,7 +258,7 @@ Dark Theme Color Palette:
   font-weight: 700;
   margin-bottom: 50px;
   text-align: center;
-  color: #FFFFFF;
+  color: #2D1B4E;
   letter-spacing: -1px;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
   line-height: 1;
@@ -266,7 +266,7 @@ Dark Theme Color Palette:
 
 /* About Section */
 .about-section {
-  background: linear-gradient(to bottom, #1A1A1A 0%, #0A0A0A 100%);
+  background: linear-gradient(to bottom, #FFFBF5 0%, #FFF8E7 100%);
 }
 
 .about-content {
@@ -277,7 +277,7 @@ Dark Theme Color Palette:
 .about-content p {
   font-size: 1.4rem;
   line-height: 1.5;
-  color: #E8E8E8;
+  color: #4A2C5F;
   margin-bottom: 30px;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
   font-weight: 400;
@@ -286,7 +286,7 @@ Dark Theme Color Palette:
 .credentials {
   margin-top: 40px;
   padding: 35px 28px;
-  background-color: #1A1A1A;
+  background-color: #FFFBF5;
   border: 1px solid rgba(212, 175, 55, 0.25);
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(74, 44, 132, 0.06);
@@ -294,7 +294,7 @@ Dark Theme Color Palette:
 
 .credentials h3 {
   font-size: 2.2rem;
-  color: #FFFFFF;
+  color: #2D1B4E;
   margin-bottom: 30px;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
   font-weight: 600;
@@ -309,7 +309,7 @@ Dark Theme Color Palette:
 .credentials ul li {
   font-size: 1.25rem;
   line-height: 1.5;
-  color: #E8E8E8;
+  color: #4A2C5F;
   margin-bottom: 20px;
   padding-left: 35px;
   position: relative;
@@ -330,13 +330,13 @@ Dark Theme Color Palette:
   margin-top: 30px;
   padding: 35px 28px;
   background: linear-gradient(135deg, rgba(212, 175, 55, 0.08) 0%, rgba(107, 73, 132, 0.06) 100%);
-  border-left: 4px solid #D0D0D0;
+  border-left: 4px solid #6B4984;
   border-radius: 8px;
 }
 
 .philosophy h3 {
   font-size: 2.2rem;
-  color: #FFFFFF;
+  color: #2D1B4E;
   margin-bottom: 30px;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
   font-weight: 600;
@@ -351,7 +351,7 @@ Dark Theme Color Palette:
 .philosophy ul li {
   font-size: 1.25rem;
   line-height: 1.5;
-  color: #E8E8E8;
+  color: #4A2C5F;
   margin-bottom: 20px;
   padding-left: 35px;
   position: relative;
@@ -363,13 +363,13 @@ Dark Theme Color Palette:
   content: '☾';
   position: absolute;
   left: 0;
-  color: #D0D0D0;
+  color: #6B4984;
   font-size: 1.1rem;
 }
 
 /* Services Section */
 .services-section {
-  background: linear-gradient(to bottom, #1A1A1A 0%, #0A0A0A 100%);
+  background: linear-gradient(to bottom, #FFFBF5 0%, #FFF8E7 100%);
 }
 
 .services-grid {
@@ -380,20 +380,20 @@ Dark Theme Color Palette:
 
 .service-card {
   padding: 35px 28px;
-  background: linear-gradient(135deg, rgba(26, 26, 26, 0.8) 0%, rgba(20, 20, 20, 0.9) 100%);
+  background: linear-gradient(135deg, rgba(255, 251, 245, 0.9) 0%, rgba(255, 248, 231, 0.8) 100%);
   border: 1px solid rgba(212, 175, 55, 0.25);
   border-radius: 12px;
   transition: all 0.3s ease;
   position: relative;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 2px 12px rgba(212, 175, 55, 0.1);
+  box-shadow: 0 2px 12px rgba(74, 44, 132, 0.06);
 }
 
 .service-card.popular {
   border-color: #D4AF37;
   border-width: 2px;
-  background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(26, 26, 26, 0.9) 100%);
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.12) 0%, rgba(107, 73, 132, 0.08) 100%);
 }
 
 .popular-badge {
@@ -401,7 +401,7 @@ Dark Theme Color Palette:
   top: -16px;
   right: 28px;
   background: linear-gradient(135deg, #D4AF37 0%, #E8C547 100%);
-  color: #000000;
+  color: #2D1B4E;
   padding: 7px 18px;
   border-radius: 25px;
   font-size: 0.7rem;
@@ -421,7 +421,7 @@ Dark Theme Color Palette:
   font-size: 2.2rem;
   font-weight: 600;
   margin-bottom: 22px;
-  color: #FFFFFF;
+  color: #2D1B4E;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
   letter-spacing: 1px;
 }
@@ -437,7 +437,7 @@ Dark Theme Color Palette:
 .service-duration,
 .service-price {
   font-size: 1.05rem;
-  color: #D0D0D0;
+  color: #6B4984;
   font-weight: 600;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
   text-transform: lowercase;
@@ -447,7 +447,7 @@ Dark Theme Color Palette:
 .service-description {
   font-size: 1.2rem;
   line-height: 1.5;
-  color: #E8E8E8;
+  color: #4A2C5F;
   margin-bottom: 30px;
   flex: 1;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
@@ -459,8 +459,8 @@ Dark Theme Color Palette:
   text-align: center;
   padding: 14px 28px;
   background-color: transparent;
-  color: #D0D0D0;
-  border: 2px solid #D0D0D0;
+  color: #6B4984;
+  border: 2px solid #6B4984;
   border-radius: 50px;
   font-weight: 600;
   transition: all 0.3s ease;
@@ -473,14 +473,14 @@ Dark Theme Color Palette:
 .service-cta:hover {
   background: linear-gradient(135deg, #D4AF37 0%, #E8C547 100%);
   border-color: #D4AF37;
-  color: #FFFFFF;
+  color: #2D1B4E;
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
 }
 
 /* Testimonials Section */
 .testimonials-section {
-  background: linear-gradient(to bottom, #0A0A0A 0%, #1A1A1A 100%);
+  background: linear-gradient(to bottom, #FFF8E7 0%, #FFFBF5 100%);
 }
 
 .testimonials-carousel {
@@ -495,10 +495,10 @@ Dark Theme Color Palette:
 
 .testimonial-card-carousel {
   padding: 40px 30px;
-  background: linear-gradient(135deg, rgba(26, 26, 26, 0.8) 0%, rgba(20, 20, 20, 0.9) 100%);
+  background: linear-gradient(135deg, rgba(255, 251, 245, 0.95) 0%, rgba(255, 248, 231, 0.9) 100%);
   border: 1px solid rgba(212, 175, 55, 0.2);
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.1);
+  box-shadow: 0 4px 20px rgba(74, 44, 132, 0.08);
   flex: 1;
   min-height: 280px;
   display: flex;
@@ -515,7 +515,7 @@ Dark Theme Color Palette:
 .carousel-button {
   background: linear-gradient(135deg, #D4AF37 0%, #E8C547 100%);
   border: none;
-  color: #FFFFFF;
+  color: #2D1B4E;
   font-size: 1.2rem;
   width: 40px;
   height: 40px;
@@ -576,11 +576,11 @@ Dark Theme Color Palette:
 
 .testimonial-card {
   padding: 40px;
-  background: linear-gradient(135deg, rgba(26, 26, 26, 0.8) 0%, rgba(20, 20, 20, 0.9) 100%);
+  background: linear-gradient(135deg, rgba(255, 251, 245, 0.95) 0%, rgba(255, 248, 231, 0.9) 100%);
   border: 1px solid rgba(212, 175, 55, 0.2);
   border-radius: 12px;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 12px rgba(212, 175, 55, 0.1);
+  box-shadow: 0 2px 12px rgba(74, 44, 132, 0.06);
 }
 
 .testimonial-card:hover {
@@ -599,7 +599,7 @@ Dark Theme Color Palette:
 .testimonial-text {
   font-size: 1.25rem;
   line-height: 1.5;
-  color: #E8E8E8;
+  color: #4A2C5F;
   margin-bottom: 30px;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
   font-weight: 400;
@@ -613,7 +613,7 @@ Dark Theme Color Palette:
 
 .author-name {
   font-weight: 600;
-  color: #FFFFFF;
+  color: #2D1B4E;
   font-size: 1.15rem;
   margin-bottom: 8px;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
@@ -621,21 +621,21 @@ Dark Theme Color Palette:
 
 .author-role {
   font-size: 1rem;
-  color: #A0A0A0;
+  color: #7A6F6B;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
   font-weight: 400;
 }
 
 /* Client Moments Section */
 .client-moments-section {
-  background: linear-gradient(to bottom, #1A1A1A 0%, #0A0A0A 100%);
+  background: linear-gradient(to bottom, #FFFBF5 0%, #FFF8E7 100%);
   padding: 80px 24px;
 }
 
 .client-moments-section .section-subtitle {
   text-align: center;
   font-size: 1.2rem;
-  color: #A0A0A0;
+  color: #7A6F6B;
   margin-bottom: 40px;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
   font-weight: 400;
@@ -676,7 +676,7 @@ Dark Theme Color Palette:
   box-shadow: 0 4px 20px rgba(212, 175, 55, 0.25);
   transition: all 0.4s ease;
   aspect-ratio: 4/3;
-  background-color: #FFFFFF;
+  background-color: #2D1B4E;
   flex-shrink: 0;
   width: 400px;
 }
@@ -700,7 +700,7 @@ Dark Theme Color Palette:
 
 /* CTA Section */
 .cta-section {
-  background: linear-gradient(135deg, #000000 0%, #0A0A0A 50%, #1A1A1A 100%);
+  background: linear-gradient(135deg, #2D1B4E 0%, #4A2C5F 50%, #6B4984 100%);
   padding: 80px 24px;
   text-align: center;
   position: relative;
@@ -740,7 +740,7 @@ Dark Theme Color Palette:
   font-size: 4.5rem;
   font-weight: 400;
   margin-bottom: 30px;
-  color: #FFFFFF;
+  color: #FFFBF5;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
   letter-spacing: 2px;
   line-height: 1.15;
@@ -748,7 +748,7 @@ Dark Theme Color Palette:
 
 .cta-section p {
   font-size: 1.5rem;
-  color: rgba(232, 232, 232, 0.85);
+  color: rgba(255, 251, 245, 0.85);
   margin-bottom: 50px;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
   font-weight: 400;
@@ -756,7 +756,7 @@ Dark Theme Color Palette:
 
 /* FAQ Section */
 .faq-section {
-  background: linear-gradient(to bottom, #0A0A0A 0%, #1A1A1A 100%);
+  background: linear-gradient(to bottom, #FFF8E7 0%, #FFFBF5 100%);
 }
 
 .faq-list {
@@ -783,7 +783,7 @@ Dark Theme Color Palette:
   padding: 32px 40px;
   background-color: transparent;
   border: none;
-  color: #FFFFFF;
+  color: #2D1B4E;
   font-size: 1.3rem;
   font-weight: 600;
   text-align: left;
@@ -796,11 +796,11 @@ Dark Theme Color Palette:
 }
 
 .faq-question:hover {
-  color: #D0D0D0;
+  color: #6B4984;
 }
 
 .faq-question.active {
-  color: #D0D0D0;
+  color: #6B4984;
 }
 
 .faq-icon {
@@ -816,7 +816,7 @@ Dark Theme Color Palette:
 
 .faq-answer {
   padding: 0 40px 35px 40px;
-  color: #E8E8E8;
+  color: #4A2C5F;
   font-size: 1.2rem;
   line-height: 1.5;
   animation: fadeIn 0.3s ease;
@@ -837,7 +837,7 @@ Dark Theme Color Palette:
 
 /* Booking Section */
 .booking-section {
-  background: linear-gradient(to bottom, #1A1A1A 0%, #0A0A0A 100%);
+  background: linear-gradient(to bottom, #FFFBF5 0%, #FFF8E7 100%);
 }
 
 .booking-content {
@@ -849,7 +849,7 @@ Dark Theme Color Palette:
 
 .booking-info h3 {
   font-size: 2.2rem;
-  color: #FFFFFF;
+  color: #2D1B4E;
   margin-bottom: 28px;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
   font-weight: 600;
@@ -859,7 +859,7 @@ Dark Theme Color Palette:
 .booking-info p {
   font-size: 1.3rem;
   line-height: 1.5;
-  color: #E8E8E8;
+  color: #4A2C5F;
   margin-bottom: 28px;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
   font-weight: 400;
@@ -874,7 +874,7 @@ Dark Theme Color Palette:
 .booking-info ul li {
   font-size: 1.2rem;
   line-height: 1.5;
-  color: #E8E8E8;
+  color: #4A2C5F;
   margin-bottom: 18px;
   padding-left: 32px;
   position: relative;
@@ -891,7 +891,7 @@ Dark Theme Color Palette:
 }
 
 .guarantee-box {
-  background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(26, 26, 26, 0.5) 100%);
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(107, 73, 132, 0.08) 100%);
   border: 2px solid rgba(212, 175, 55, 0.3);
   border-radius: 12px;
   padding: 32px;
@@ -899,7 +899,7 @@ Dark Theme Color Palette:
 }
 
 .guarantee-box h4 {
-  color: #D0D0D0;
+  color: #6B4984;
   font-size: 1.5rem;
   margin-bottom: 18px;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
@@ -907,7 +907,7 @@ Dark Theme Color Palette:
 }
 
 .guarantee-box p {
-  color: #E8E8E8;
+  color: #4A2C5F;
   font-size: 1.2rem;
   margin: 0;
   line-height: 1.5;
@@ -932,7 +932,7 @@ Dark Theme Color Palette:
 
 .placeholder-text {
   font-size: 1.25rem;
-  color: #D0D0D0;
+  color: #6B4984;
   margin-bottom: 18px;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
   font-weight: 600;
@@ -940,7 +940,7 @@ Dark Theme Color Palette:
 
 .placeholder-instruction {
   font-size: 0.95rem;
-  color: #A0A0A0;
+  color: #7A6F6B;
   max-width: 500px;
   line-height: 1.5;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
@@ -951,14 +951,14 @@ Dark Theme Color Palette:
   background-color: rgba(212, 175, 55, 0.15);
   padding: 3px 8px;
   border-radius: 4px;
-  color: #D0D0D0;
+  color: #6B4984;
   font-size: 0.85rem;
   font-weight: 500;
 }
 
 /* Contact Section */
 .contact-section {
-  background: linear-gradient(to bottom, #0A0A0A 0%, #1A1A1A 100%);
+  background: linear-gradient(to bottom, #FFF8E7 0%, #FFFBF5 100%);
 }
 
 .contact-content {
@@ -970,7 +970,7 @@ Dark Theme Color Palette:
 .contact-content p {
   font-size: 1.4rem;
   line-height: 1.5;
-  color: #E8E8E8;
+  color: #4A2C5F;
   margin-bottom: 50px;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
   font-weight: 400;
@@ -985,10 +985,10 @@ Dark Theme Color Palette:
 
 .contact-link {
   font-size: 1.25rem;
-  color: #D0D0D0;
+  color: #6B4984;
   transition: all 0.3s ease;
   padding: 18px 42px;
-  border: 2px solid #D0D0D0;
+  border: 2px solid #6B4984;
   border-radius: 50px;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
   font-weight: 500;
@@ -997,7 +997,7 @@ Dark Theme Color Palette:
 .contact-link:hover {
   background: linear-gradient(135deg, #D4AF37 0%, #E8C547 100%);
   border-color: #D4AF37;
-  color: #FFFFFF;
+  color: #2D1B4E;
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3);
 }
@@ -1009,7 +1009,7 @@ Dark Theme Color Palette:
 
 .social-links a {
   font-size: 1.05rem;
-  color: #A0A0A0;
+  color: #7A6F6B;
   transition: all 0.3s ease;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
   font-weight: 500;
@@ -1022,8 +1022,8 @@ Dark Theme Color Palette:
 /* Footer */
 .footer {
   padding: 70px 40px;
-  background: linear-gradient(135deg, #000000 0%, #0A0A0A 100%);
-  color: #E8E8E8;
+  background: linear-gradient(135deg, #1A1F3A 0%, #2D1B4E 100%);
+  color: #FFFBF5;
 }
 
 .footer-content {
@@ -1033,7 +1033,7 @@ Dark Theme Color Palette:
 }
 
 .footer-content p {
-  color: rgba(160, 160, 160, 0.7);
+  color: rgba(255, 251, 245, 0.7);
   font-size: 0.9rem;
   margin-bottom: 16px;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
@@ -1048,7 +1048,7 @@ Dark Theme Color Palette:
 }
 
 .footer-links a {
-  color: rgba(160, 160, 160, 0.7);
+  color: rgba(255, 251, 245, 0.7);
   transition: color 0.3s ease;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
   font-weight: 400;
@@ -1081,7 +1081,7 @@ Dark Theme Color Palette:
 }
 
 .popup-content {
-  background: linear-gradient(135deg, rgba(26, 26, 26, 0.98) 0%, rgba(20, 20, 20, 0.95) 100%);
+  background: linear-gradient(135deg, rgba(255, 251, 245, 0.98) 0%, rgba(255, 248, 231, 0.95) 100%);
   border: 1px solid rgba(212, 175, 55, 0.3);
   border-radius: 16px;
   padding: 55px 48px;
@@ -1089,7 +1089,7 @@ Dark Theme Color Palette:
   width: 90%;
   position: relative;
   text-align: center;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 20px 60px rgba(45, 27, 78, 0.3);
 }
 
 .popup-close {
@@ -1098,7 +1098,7 @@ Dark Theme Color Palette:
   right: 22px;
   background: none;
   border: none;
-  color: #A0A0A0;
+  color: #7A6F6B;
   font-size: 2rem;
   cursor: pointer;
   transition: color 0.3s ease;
@@ -1113,7 +1113,7 @@ Dark Theme Color Palette:
 
 .popup-content h2 {
   font-size: 2.2rem;
-  color: #FFFFFF;
+  color: #2D1B4E;
   margin-bottom: 16px;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
   font-weight: 600;
@@ -1122,7 +1122,7 @@ Dark Theme Color Palette:
 
 .popup-content p {
   font-size: 1.1rem;
-  color: #E8E8E8;
+  color: #4A2C5F;
   margin-bottom: 32px;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
   font-weight: 400;
@@ -1133,10 +1133,10 @@ Dark Theme Color Palette:
   width: 100%;
   padding: 16px 22px;
   font-size: 1rem;
-  background-color: #1A1A1A;
+  background-color: #FFFBF5;
   border: 2px solid rgba(212, 175, 55, 0.3);
   border-radius: 50px;
-  color: #FFFFFF;
+  color: #2D1B4E;
   margin-bottom: 22px;
   transition: all 0.3s ease;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
@@ -1152,7 +1152,7 @@ Dark Theme Color Palette:
   width: 100%;
   padding: 16px 32px;
   background: linear-gradient(135deg, #D4AF37 0%, #E8C547 100%);
-  color: #FFFFFF;
+  color: #2D1B4E;
   border: none;
   border-radius: 50px;
   font-size: 0.95rem;
@@ -1172,7 +1172,7 @@ Dark Theme Color Palette:
 
 .popup-privacy {
   font-size: 0.8rem;
-  color: #A0A0A0;
+  color: #7A6F6B;
   margin-top: 18px;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
   font-weight: 400;
@@ -1187,7 +1187,7 @@ Dark Theme Color Palette:
   width: 85px;
   height: 85px;
   background: linear-gradient(135deg, #D4AF37 0%, #E8C547 100%);
-  color: #FFFFFF;
+  color: #2D1B4E;
   border-radius: 50%;
   display: flex;
   align-items: center;
