@@ -185,7 +185,7 @@ function App() {
         <div className="hero-content">
           <h1 className="hero-title">Astrology Readings in Bali and beyond</h1>
           <p className="hero-description">
-            explore your birth chart • discover patterns in your relationships & life path • find clarity through the cosmos
+            explore your birth chart • discover patterns in your relationships & life path • find clarity through time tested techniques
           </p>
           <a href="#booking" className="cta-button" onClick={handleBookingClick}>book a reading</a>
           <p className="guarantee-text">sessions from €75 • if it doesn't resonate, I'll refund you</p>
@@ -303,7 +303,22 @@ function App() {
         <div className="container">
           <h2 className="section-title">Sessions that resonated</h2>
           <p className="section-subtitle">faces & moments from our time together</p>
-          <div className="client-photos-grid">
+        </div>
+        <div className="client-photos-carousel">
+          <div className="client-photos-track">
+            <div className="client-photo">
+              <img src={clientPhoto1} alt="Happy client during natal chart reading session" />
+            </div>
+            <div className="client-photo">
+              <img src={clientPhoto2} alt="Client giving thumbs up during astrology consultation" />
+            </div>
+            <div className="client-photo">
+              <img src={clientPhoto3} alt="Satisfied client during chart reading" />
+            </div>
+            <div className="client-photo">
+              <img src={clientPhoto4} alt="Smiling client during astrology session" />
+            </div>
+            {/* Duplicate for seamless loop */}
             <div className="client-photo">
               <img src={clientPhoto1} alt="Happy client during natal chart reading session" />
             </div>
@@ -356,17 +371,16 @@ function App() {
       {/* Booking Section */}
       <section id="booking" className="section booking-section">
         <div className="container">
-          <h2 className="section-title">Let's begin</h2>
+          <h2 className="section-title">What to expect</h2>
           <div className="booking-content">
             <div className="booking-info">
-              <h3>What to expect</h3>
+              
               <p>
-                We'll meet via video call. After you book, you'll get:
+                We'll meet via video call or in person (Bali). After you book, you'll get:
               </p>
               <ul>
-                <li>A questionnaire to help me prepare for your session</li>
-                <li>Instructions on how to find your birth information if needed</li>
-                <li>Video call link sent 24 hours before your appointment</li>
+                <li>A questionnaire to help me prepare for your session via e-mail</li>
+                <li>Video call link sent 12 hours before your appointment</li>
                 <li>Recording of the session for your records</li>
               </ul>
               <div className="guarantee-box">

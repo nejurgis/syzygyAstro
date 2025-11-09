@@ -642,12 +642,31 @@ Mystical Warm Color Palette:
   font-style: italic;
 }
 
-.client-photos-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+.client-photos-carousel {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  padding: 20px 0;
+}
+
+.client-photos-track {
+  display: flex;
+  gap: 24px;
+  animation: scroll-infinite 30s linear infinite;
+  width: fit-content;
+}
+
+.client-photos-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-infinite {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .client-photo {
@@ -658,6 +677,8 @@ Mystical Warm Color Palette:
   transition: all 0.4s ease;
   aspect-ratio: 4/3;
   background-color: #2D1B4E;
+  flex-shrink: 0;
+  width: 400px;
 }
 
 .client-photo:hover {
@@ -1293,9 +1314,8 @@ Mystical Warm Color Palette:
     font-size: 1rem;
   }
 
-  .client-photos-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
+  .client-photo {
+    width: 280px;
   }
 
   .client-moments-section {
