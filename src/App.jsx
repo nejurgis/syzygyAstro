@@ -183,9 +183,7 @@ function App() {
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-content">
-          <div className="trust-badge">☾ astrologer in bali & beyond</div>
-          <h1 className="hero-title">Astrology Readings</h1>
-          <p className="hero-subtitle">with Jurgis</p>
+          <h1 className="hero-title">Astrology Readings in Bali and beyond</h1>
           <p className="hero-description">
             explore your birth chart • discover patterns in your relationships & life path • find clarity through the cosmos
           </p>
@@ -206,7 +204,7 @@ function App() {
         </div>
         <div className="trust-item">
           <div className="trust-number">☾</div>
-          <div className="trust-label">2000+ year old techniques</div>
+          <div className="trust-label">trusted 2000+ year old techniques</div>
         </div>
       </section>
 
