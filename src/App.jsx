@@ -9,6 +9,7 @@ function App() {
   const [showEmailPopup, setShowEmailPopup] = useState(false)
   const [emailSubmitted, setEmailSubmitted] = useState(false)
   const [faqOpen, setFaqOpen] = useState({})
+  const [currentTestimonial, setCurrentTestimonial] = useState(0)
 
   // Exit-intent popup
   useEffect(() => {
@@ -67,6 +68,21 @@ function App() {
   const toggleFAQ = (index) => {
     setFaqOpen(prev => ({ ...prev, [index]: !prev[index] }))
   }
+
+  // Testimonial carousel navigation
+  const nextTestimonial = () => {
+    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length)
+  }
+
+  const prevTestimonial = () => {
+    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length)
+  }
+
+  // Auto-rotate testimonials
+  useEffect(() => {
+    const interval = setInterval(nextTestimonial, 6000)
+    return () => clearInterval(interval)
+  }, [])
 
   const services = [
     {
@@ -181,7 +197,7 @@ function App() {
       {/* Trust Bar */}
       <section className="trust-bar">
         <div className="trust-item">
-          <div className="trust-number">50+</div>
+          <div className="trust-number">150+</div>
           <div className="trust-label">readings given</div>
         </div>
         <div className="trust-item">
@@ -197,7 +213,7 @@ function App() {
       {/* About Section */}
       <section id="about" className="section about-section">
         <div className="container">
-          <h2 className="section-title">How I Work</h2>
+          <h2 className="section-title">Ancient wisdom. Modern life.</h2>
           <div className="about-content">
             <p>
               I practice Hellenistic astrology—the original tradition of Western astrology—using techniques like whole sign houses, zodiacal releasing, and profections. This isn't about predicting your future or telling you who to be. It's about understanding the patterns that shape your life, grounded in 2,000+ years of wisdom.
@@ -210,7 +226,7 @@ function App() {
               <ul>
                 <li>My interest in astrology came from trying to figure out my own behaviours</li>
                 <li>For the past 4 years i've been studying every day and for the past 3 years i've been giving paid offerings</li>
-                <li>By now I had Over 50 paid readings and aprox 100 unpaid readings for learning purpose swith people from all walks of life</li>
+                <li>By now I had Over 50 paid readings and aprox 100 unpaid readings (when i was learning) with people from all walks of life</li>
                 <li>Studied with respected astrologers like Austin Coppock, Demetra George, and Chris Brennan</li>
               </ul>
             </div>
@@ -230,7 +246,7 @@ function App() {
       {/* Services Section */}
       <section id="services" className="section services-section">
         <div className="container">
-          <h2 className="section-title">Choose Your Reading</h2>
+          <h2 className="section-title">Your reading awaits</h2>
           <div className="services-grid">
             {services.map((service) => (
               <div key={service.id} className={`service-card ${service.popular ? 'popular' : ''}`}>
@@ -251,17 +267,34 @@ function App() {
       {/* Testimonials Section */}
       <section id="testimonials" className="section testimonials-section">
         <div className="container">
-          <h2 className="section-title">What people have said</h2>
-          <div className="testimonials-grid">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="testimonial-card">
-                <div className="stars">{'★'.repeat(testimonial.rating)}</div>
-                <p className="testimonial-text">"{testimonial.text}"</p>
-                <div className="testimonial-author">
-                  <div className="author-name">{testimonial.name}</div>
-                  <div className="author-role">{testimonial.role}</div>
-                </div>
+          <h2 className="section-title">Kind words from past clients</h2>
+          <div className="testimonials-carousel">
+            <button className="carousel-button prev" onClick={prevTestimonial} aria-label="Previous testimonial">
+              ←
+            </button>
+
+            <div className="testimonial-card-carousel">
+              <div className="stars">{'★'.repeat(testimonials[currentTestimonial].rating)}</div>
+              <p className="testimonial-text">"{testimonials[currentTestimonial].text}"</p>
+              <div className="testimonial-author">
+                <div className="author-name">{testimonials[currentTestimonial].name}</div>
+                <div className="author-role">{testimonials[currentTestimonial].role}</div>
               </div>
+            </div>
+
+            <button className="carousel-button next" onClick={nextTestimonial} aria-label="Next testimonial">
+              →
+            </button>
+          </div>
+
+          <div className="carousel-dots">
+            {testimonials.map((_, index) => (
+              <button
+                key={index}
+                className={`dot ${index === currentTestimonial ? 'active' : ''}`}
+                onClick={() => setCurrentTestimonial(index)}
+                aria-label={`Go to testimonial ${index + 1}`}
+              />
             ))}
           </div>
         </div>
@@ -270,8 +303,8 @@ function App() {
       {/* Client Moments Section */}
       <section className="section client-moments-section">
         <div className="container">
-          <h2 className="section-title">Moments from readings</h2>
-          <p className="section-subtitle">Some faces from past sessions</p>
+          <h2 className="section-title">Sessions that resonated</h2>
+          <p className="section-subtitle">faces & moments from our time together</p>
           <div className="client-photos-grid">
             <div className="client-photo">
               <img src={clientPhoto1} alt="Happy client during natal chart reading session" />
@@ -292,8 +325,8 @@ function App() {
       {/* CTA Section */}
       <section className="cta-section">
         <div className="container">
-          <h2>Ready to explore your chart?</h2>
-          <p>Let's see what the stars have to say about your story</p>
+          <h2>Your chart is calling</h2>
+          <p>Let's explore what the cosmos reveal about your path</p>
           <a href="#booking" className="cta-button large" onClick={handleBookingClick}>book a session</a>
           <p className="guarantee-text">if the reading doesn't click with you, just let me know</p>
         </div>
@@ -302,7 +335,7 @@ function App() {
       {/* FAQ Section */}
       <section id="faq" className="section faq-section">
         <div className="container">
-          <h2 className="section-title">Common questions</h2>
+          <h2 className="section-title">Questions? Answered.</h2>
           <div className="faq-list">
             {faqs.map((faq, index) => (
               <div key={index} className="faq-item">
@@ -325,7 +358,7 @@ function App() {
       {/* Booking Section */}
       <section id="booking" className="section booking-section">
         <div className="container">
-          <h2 className="section-title">Book a session</h2>
+          <h2 className="section-title">Let's begin</h2>
           <div className="booking-content">
             <div className="booking-info">
               <h3>What to expect</h3>
@@ -363,7 +396,7 @@ function App() {
       {/* Contact Section */}
       <section id="contact" className="section contact-section">
         <div className="container">
-          <h2 className="section-title">Get in touch</h2>
+          <h2 className="section-title">Say hello</h2>
           <div className="contact-content">
             <p>
               Questions? Want to chat first? Just reach out.

@@ -483,6 +483,91 @@ Mystical Warm Color Palette:
   background: linear-gradient(to bottom, #FFF8E7 0%, #FFFBF5 100%);
 }
 
+.testimonials-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto 40px;
+  position: relative;
+}
+
+.testimonial-card-carousel {
+  padding: 50px 60px;
+  background: linear-gradient(135deg, rgba(255, 251, 245, 0.95) 0%, rgba(255, 248, 231, 0.9) 100%);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(74, 44, 132, 0.08);
+  flex: 1;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.testimonial-card-carousel:hover {
+  border-color: #D4AF37;
+  box-shadow: 0 8px 30px rgba(212, 175, 55, 0.2);
+}
+
+.carousel-button {
+  background: linear-gradient(135deg, #D4AF37 0%, #E8C547 100%);
+  border: none;
+  color: #2D1B4E;
+  font-size: 2rem;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+  flex-shrink: 0;
+  font-weight: 300;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+  background: linear-gradient(135deg, #E8C547 0%, #D4AF37 100%);
+}
+
+.carousel-button:active {
+  transform: scale(0.95);
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid #D4AF37;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.dot.active {
+  background: #D4AF37;
+  transform: scale(1.2);
+}
+
+.dot:hover {
+  background: rgba(212, 175, 55, 0.5);
+}
+
 .testimonials-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -1193,6 +1278,21 @@ Mystical Warm Color Palette:
 
   .testimonials-grid {
     grid-template-columns: 1fr;
+  }
+
+  .testimonials-carousel {
+    gap: 20px;
+  }
+
+  .testimonial-card-carousel {
+    padding: 35px 30px;
+    min-height: 250px;
+  }
+
+  .carousel-button {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
   }
 
   .client-photos-grid {
