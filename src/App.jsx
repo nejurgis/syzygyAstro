@@ -302,7 +302,7 @@ function App() {
       <section className="section client-moments-section">
         <div className="container">
           <h2 className="section-title">Sessions that resonated</h2>
-          <p className="section-subtitle">faces & moments from our time together</p>
+          <p className="section-subtitle">faces of my previous clients speak for themselves</p>
         </div>
         <div className="client-photos-carousel">
           <div className="client-photos-track">
