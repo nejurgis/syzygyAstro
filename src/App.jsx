@@ -255,7 +255,7 @@ function App() {
                   <span className="service-price">{service.price}</span>
                 </div>
                 <p className="service-description">{service.description}</p>
-                <a href="#booking" className="service-cta" onClick={handleBookingClick}>learn more</a>
+                <a href="#booking" className="service-cta" onClick={handleBookingClick}>BOOK A SESSION</a>
               </div>
             ))}
           </div>
