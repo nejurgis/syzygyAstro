@@ -373,7 +373,7 @@ function App() {
               </ul>
               <div className="guarantee-box">
                 <h4>☾ My promise</h4>
-                <p>If the reading doesn't resonate with you or feel helpful, just reach out within a week and I'll give you a full refund. Simple as that.</p>
+                <p>If the reading doesn't resonate with you or feel helpful, just reach out within a day and I'll give you a full refund. Simple as that.</p>
               </div>
             </div>
 

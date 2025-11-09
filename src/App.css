@@ -77,7 +77,7 @@ Mystical Warm Color Palette:
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 140px 40px 80px;
+  padding: 140px 24px 60px;
   background: linear-gradient(135deg, #1A1F3A 0%, #2D1B4E 50%, #4A2C5F 100%);
   position: relative;
   overflow: hidden;
@@ -211,10 +211,10 @@ Mystical Warm Color Palette:
 /* Trust Bar */
 .trust-bar {
   background: linear-gradient(to bottom, #FFF8E7 0%, #FFFBF5 100%);
-  padding: 70px 40px;
+  padding: 50px 24px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 50px;
+  gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
   border-top: 1px solid rgba(212, 175, 55, 0.2);
@@ -245,7 +245,7 @@ Mystical Warm Color Palette:
 
 /* Sections */
 .section {
-  padding: 120px 40px;
+  padding: 80px 24px;
 }
 
 .container {
@@ -256,7 +256,7 @@ Mystical Warm Color Palette:
 .section-title {
   font-size: 4.5rem;
   font-weight: 400;
-  margin-bottom: 80px;
+  margin-bottom: 50px;
   text-align: center;
   color: #2D1B4E;
   letter-spacing: 2px;
@@ -278,14 +278,14 @@ Mystical Warm Color Palette:
   font-size: 1.4rem;
   line-height: 2;
   color: #4A2C5F;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   font-family: 'Crimson Pro', serif;
   font-weight: 400;
 }
 
 .credentials {
-  margin-top: 60px;
-  padding: 45px;
+  margin-top: 40px;
+  padding: 35px 28px;
   background-color: #FFFBF5;
   border: 1px solid rgba(212, 175, 55, 0.25);
   border-radius: 12px;
@@ -327,8 +327,8 @@ Mystical Warm Color Palette:
 }
 
 .philosophy {
-  margin-top: 40px;
-  padding: 45px;
+  margin-top: 30px;
+  padding: 35px 28px;
   background: linear-gradient(135deg, rgba(212, 175, 55, 0.08) 0%, rgba(107, 73, 132, 0.06) 100%);
   border-left: 4px solid #6B4984;
   border-radius: 8px;
@@ -375,11 +375,11 @@ Mystical Warm Color Palette:
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 35px;
+  gap: 24px;
 }
 
 .service-card {
-  padding: 45px 38px;
+  padding: 35px 28px;
   background: linear-gradient(135deg, rgba(255, 251, 245, 0.9) 0%, rgba(255, 248, 231, 0.8) 100%);
   border: 1px solid rgba(212, 175, 55, 0.25);
   border-radius: 12px;
@@ -487,20 +487,20 @@ Mystical Warm Color Palette:
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 40px;
+  gap: 16px;
   max-width: 900px;
-  margin: 0 auto 40px;
+  margin: 0 auto 30px;
   position: relative;
 }
 
 .testimonial-card-carousel {
-  padding: 50px 60px;
+  padding: 40px 30px;
   background: linear-gradient(135deg, rgba(255, 251, 245, 0.95) 0%, rgba(255, 248, 231, 0.9) 100%);
   border: 1px solid rgba(212, 175, 55, 0.2);
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(74, 44, 132, 0.08);
   flex: 1;
-  min-height: 300px;
+  min-height: 280px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -516,13 +516,13 @@ Mystical Warm Color Palette:
   background: linear-gradient(135deg, #D4AF37 0%, #E8C547 100%);
   border: none;
   color: #2D1B4E;
-  font-size: 2rem;
-  width: 60px;
-  height: 60px;
+  font-size: 1.2rem;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+  box-shadow: 0 2px 8px rgba(212, 175, 55, 0.3);
   flex-shrink: 0;
   font-weight: 300;
   line-height: 1;
@@ -532,8 +532,8 @@ Mystical Warm Color Palette:
 }
 
 .carousel-button:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.5);
   background: linear-gradient(135deg, #E8C547 0%, #D4AF37 100%);
 }
 
@@ -629,14 +629,14 @@ Mystical Warm Color Palette:
 /* Client Moments Section */
 .client-moments-section {
   background: linear-gradient(to bottom, #FFFBF5 0%, #FFF8E7 100%);
-  padding: 90px 40px;
+  padding: 80px 24px;
 }
 
 .client-moments-section .section-subtitle {
   text-align: center;
   font-size: 1.2rem;
   color: #7A6F6B;
-  margin-bottom: 55px;
+  margin-bottom: 40px;
   font-family: 'Crimson Pro', serif;
   font-weight: 400;
   font-style: italic;
@@ -645,7 +645,7 @@ Mystical Warm Color Palette:
 .client-photos-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
+  gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -682,7 +682,7 @@ Mystical Warm Color Palette:
 /* CTA Section */
 .cta-section {
   background: linear-gradient(135deg, #2D1B4E 0%, #4A2C5F 50%, #6B4984 100%);
-  padding: 100px 40px;
+  padding: 80px 24px;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -1208,25 +1208,25 @@ Mystical Warm Color Palette:
 
 @media (max-width: 768px) {
   .header {
-    padding: 25px 30px;
+    padding: 20px 20px;
   }
 
   .header-nav {
-    gap: 22px;
+    gap: 20px;
     font-size: 0.75rem;
   }
 
   .hero {
-    padding: 120px 28px 70px;
+    padding: 100px 20px 50px;
   }
 
   .hero-title {
-    font-size: 3.2rem;
-    letter-spacing: -1px;
+    font-size: 3rem;
+    letter-spacing: 0px;
   }
 
   .hero-subtitle {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
   }
 
   .hero-description {
@@ -1234,12 +1234,12 @@ Mystical Warm Color Palette:
   }
 
   .section {
-    padding: 75px 28px;
+    padding: 60px 20px;
   }
 
   .section-title {
     font-size: 2.5rem;
-    margin-bottom: 55px;
+    margin-bottom: 40px;
   }
 
   .about-content p {
@@ -1247,15 +1247,15 @@ Mystical Warm Color Palette:
   }
 
   .philosophy, .credentials {
-    padding: 35px 28px;
+    padding: 28px 20px;
   }
 
   .service-card {
-    padding: 38px 28px;
+    padding: 28px 20px;
   }
 
   .cta-button {
-    padding: 16px 42px;
+    padding: 16px 40px;
     font-size: 0.9rem;
   }
 
@@ -1269,7 +1269,7 @@ Mystical Warm Color Palette:
 
   .trust-bar {
     grid-template-columns: 1fr 1fr;
-    padding: 55px 28px;
+    padding: 40px 20px;
   }
 
   .trust-number {
@@ -1281,36 +1281,36 @@ Mystical Warm Color Palette:
   }
 
   .testimonials-carousel {
-    gap: 20px;
+    gap: 12px;
   }
 
   .testimonial-card-carousel {
-    padding: 35px 30px;
-    min-height: 250px;
+    padding: 30px 20px;
+    min-height: 240px;
   }
 
   .carousel-button {
-    width: 50px;
-    height: 50px;
-    font-size: 1.5rem;
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
   }
 
   .client-photos-grid {
     grid-template-columns: 1fr;
-    gap: 22px;
+    gap: 16px;
   }
 
   .client-moments-section {
-    padding: 70px 28px;
+    padding: 60px 20px;
   }
 
   .client-moments-section .section-subtitle {
     font-size: 1rem;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
 
   .popup-content {
-    padding: 45px 32px;
+    padding: 40px 28px;
   }
 
   .popup-content h2 {
