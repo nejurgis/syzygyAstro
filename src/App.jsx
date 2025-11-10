@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
 import './App.css'
-import clientPhoto1 from './assets/Screenshot 2025-09-12 at 15.35.28.png'
-import clientPhoto2 from './assets/Screenshot 2025-11-05 at 19.42.46.png'
-import clientPhoto3 from './assets/Screenshot 2025-09-17 at 16.00.55.png'
-import clientPhoto4 from './assets/Screenshot 2025-09-20 at 18.10.51.png'
+import clientPhoto1 from './assets/1-compressed.jpg'
+import clientPhoto2 from './assets/2-compressed.jpg'
+import clientPhoto3 from './assets/3-compressed.jpg'
+import clientPhoto4 from './assets/4-compressed.jpg'
 
 function App() {
   const [showEmailPopup, setShowEmailPopup] = useState(false)
@@ -307,29 +307,29 @@ function App() {
         <div className="client-photos-carousel">
           <div className="client-photos-track">
             <div className="client-photo">
-              <img src={clientPhoto1} alt="Happy client during natal chart reading session" />
+              <img src={clientPhoto1} alt="Happy client during natal chart reading session" loading="lazy" />
             </div>
             <div className="client-photo">
-              <img src={clientPhoto2} alt="Client giving thumbs up during astrology consultation" />
+              <img src={clientPhoto2} alt="Client giving thumbs up during astrology consultation" loading="lazy" />
             </div>
             <div className="client-photo">
-              <img src={clientPhoto3} alt="Satisfied client during chart reading" />
+              <img src={clientPhoto3} alt="Satisfied client during chart reading" loading="lazy" />
             </div>
             <div className="client-photo">
-              <img src={clientPhoto4} alt="Smiling client during astrology session" />
+              <img src={clientPhoto4} alt="Smiling client during astrology session" loading="lazy" />
             </div>
             {/* Duplicate for seamless loop */}
             <div className="client-photo">
-              <img src={clientPhoto1} alt="Happy client during natal chart reading session" />
+              <img src={clientPhoto1} alt="Happy client during natal chart reading session" loading="lazy" />
             </div>
             <div className="client-photo">
-              <img src={clientPhoto2} alt="Client giving thumbs up during astrology consultation" />
+              <img src={clientPhoto2} alt="Client giving thumbs up during astrology consultation" loading="lazy" />
             </div>
             <div className="client-photo">
-              <img src={clientPhoto3} alt="Satisfied client during chart reading" />
+              <img src={clientPhoto3} alt="Satisfied client during chart reading" loading="lazy" />
             </div>
             <div className="client-photo">
-              <img src={clientPhoto4} alt="Smiling client during astrology session" />
+              <img src={clientPhoto4} alt="Smiling client during astrology session" loading="lazy" />
             </div>
           </div>
         </div>
@@ -398,6 +398,7 @@ function App() {
                 height="800"
                 style={{ border: 0 }}
                 allow="payment"
+                loading="lazy"
               ></iframe>
               <script src="https://embed.acuityscheduling.com/js/embed.js" type="text/javascript"></script>
             </div>
