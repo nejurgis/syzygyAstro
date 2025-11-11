@@ -98,6 +98,37 @@ export function trackInitiateCheckout(customData = {}) {
   });
 }
 
+export function trackSchedule(customData = {}) {
+  return trackConversion('Schedule', {
+    customData,
+    gtagEvent: {
+      action: 'schedule_appointment',
+      params: {
+        event_category: 'engagement',
+        event_label: 'appointment_scheduled'
+      }
+    }
+  });
+}
+
+export function trackPurchase(value, currency = 'EUR', customData = {}) {
+  return trackConversion('Purchase', {
+    customData: {
+      value,
+      currency,
+      ...customData
+    },
+    gtagEvent: {
+      action: 'purchase',
+      params: {
+        event_category: 'ecommerce',
+        value,
+        currency
+      }
+    }
+  });
+}
+
 export function trackPageView() {
   const eventId = generateEventId();
   const { fbp, fbc } = getFacebookCookies();

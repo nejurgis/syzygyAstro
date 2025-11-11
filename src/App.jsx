@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import './App.css'
-import { trackLead, trackInitiateCheckout } from './utils/tracking'
+import { trackInitiateCheckout, trackSchedule, trackPurchase } from './utils/tracking'
 import clientPhoto1 from './assets/1-compressed.jpg'
 import clientPhoto2 from './assets/2-compressed.jpg'
 import clientPhoto3 from './assets/3-compressed.jpg'
@@ -34,18 +34,43 @@ function App() {
     }
   }, [emailSubmitted])
 
-  const handleEmailSubmit = async (e) => {
-    e.preventDefault()
-    const email = e.target.email.value
+  // Setup Acuity Scheduling tracking
+  useEffect(() => {
+    // Listen for Acuity scheduling events
+    window.addEventListener('message', function(event) {
+      // Make sure message is from Acuity Scheduling
+      if (event.origin !== 'https://app.acuityscheduling.com') return;
 
-    // Track conversion event with both client and server-side tracking
-    await trackLead(email)
+      try {
+        const data = JSON.parse(event.data);
 
-    setEmailSubmitted(true)
-    localStorage.setItem('emailCaptured', 'true')
-    // Here you would integrate with your email service
-    console.log('Email submitted:', email)
-  }
+        // Track when user successfully schedules an appointment
+        if (data.type === 'appointment.scheduled') {
+          console.log('Appointment scheduled:', data);
+
+          // Track Schedule event
+          trackSchedule({
+            contentName: data.appointmentType || 'Astrology Reading',
+            contentCategory: 'Booking'
+          });
+
+          // If payment was made, track Purchase event
+          if (data.payment && data.payment.amount) {
+            trackPurchase(
+              data.payment.amount,
+              data.payment.currency || 'EUR',
+              {
+                contentName: data.appointmentType || 'Astrology Reading',
+                appointmentId: data.id
+              }
+            );
+          }
+        }
+      } catch (e) {
+        // Ignore messages that aren't JSON
+      }
+    });
+  }, [])
 
   const handleBookingClick = () => {
     // Track conversion event with both client and server-side tracking
