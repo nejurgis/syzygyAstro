@@ -1,0 +1,14 @@
+# Netlify configuration for astrology portfolio
+
+[build]
+  publish = "dist"
+  command = "npm run build"
+
+# Netlify Functions directory
+[functions]
+  directory = "netlify/functions"
+
+# Environment variables (set these in Netlify dashboard)
+# FB_CONVERSIONS_API_TOKEN = "your-access-token"
+# FB_PIXEL_ID = "815934864526504"
+# FB_TEST_EVENT_CODE = "TEST12345" (optional, only for testing)

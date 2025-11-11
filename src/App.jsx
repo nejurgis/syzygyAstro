@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import './App.css'
+import { trackLead, trackInitiateCheckout } from './utils/tracking'
 import clientPhoto1 from './assets/1-compressed.jpg'
 import clientPhoto2 from './assets/2-compressed.jpg'
 import clientPhoto3 from './assets/3-compressed.jpg'
@@ -33,20 +34,12 @@ function App() {
     }
   }, [emailSubmitted])
 
-  const handleEmailSubmit = (e) => {
+  const handleEmailSubmit = async (e) => {
     e.preventDefault()
     const email = e.target.email.value
 
-    // Track conversion event
-    if (window.fbq) {
-      window.fbq('track', 'Lead')
-    }
-    if (window.gtag) {
-      window.gtag('event', 'generate_lead', {
-        event_category: 'engagement',
-        event_label: 'free_guide_download'
-      })
-    }
+    // Track conversion event with both client and server-side tracking
+    await trackLead(email)
 
     setEmailSubmitted(true)
     localStorage.setItem('emailCaptured', 'true')
@@ -55,14 +48,8 @@ function App() {
   }
 
   const handleBookingClick = () => {
-    if (window.fbq) {
-      window.fbq('track', 'InitiateCheckout')
-    }
-    if (window.gtag) {
-      window.gtag('event', 'begin_checkout', {
-        event_category: 'ecommerce'
-      })
-    }
+    // Track conversion event with both client and server-side tracking
+    trackInitiateCheckout()
   }
 
   const toggleFAQ = (index) => {
