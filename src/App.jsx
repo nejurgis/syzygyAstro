@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import './App.css'
 import { trackInitiateCheckout, trackSchedule, trackPurchase } from './utils/tracking'
+import portraitImg from './assets/portrait.jpg'
 import clientPhoto1 from './assets/1-compressed.jpg'
 import clientPhoto2 from './assets/2-compressed.jpg'
 import clientPhoto3 from './assets/3-compressed.jpg'
@@ -110,7 +111,7 @@ function App() {
       title: 'Timing (Electional) Consultation',
       duration: '60 minutes',
       price: '€75',
-      description: 'Using electional astrology to find the best timing for important events—launches, moves, decisions. We pick moments when the cosmos are on your side.',
+      description: 'Using electional astrology to find the best timing for important events—launches, moves, decisions. We will find the best timing for your launch',
       popular: false
     },
     {
@@ -197,7 +198,7 @@ function App() {
         <div className="hero-content">
           <h1 className="hero-title">Astrology Readings in Bali and beyond</h1>
           <p className="hero-description">
-            explore your birth chart • discover patterns in your relationships & life path • find clarity through time tested techniques
+            Understand your birth chart • discover patterns in your relationships & life path • find clarity through time tested techniques
           </p>
           <a href="#booking" className="cta-button" onClick={handleBookingClick}>book a reading</a>
           <p className="guarantee-text">sessions from €75 • if it doesn't resonate, I'll refund you</p>
@@ -207,8 +208,8 @@ function App() {
       {/* Trust Bar */}
       <section className="trust-bar">
         <div className="trust-item">
-          <div className="trust-number">150+</div>
-          <div className="trust-label">readings given</div>
+          <div className="trust-number">50+</div>
+          <div className="trust-label">paid readings given</div>
         </div>
         <div className="trust-item">
           <div className="trust-number">4</div>
@@ -223,31 +224,31 @@ function App() {
       {/* About Section */}
       <section id="about" className="section about-section">
         <div className="container">
-          <h2 className="section-title">Ancient wisdom. Modern life.</h2>
-          <div className="about-content">
-            <p>
-              I practice Hellenistic astrology—the original tradition of Western astrology—using techniques like whole sign houses, zodiacal releasing, and profections. This isn't about predicting your future or telling you who to be. It's about understanding the patterns that shape your life, grounded in 2,000+ years of wisdom.
-            </p>
-            <p>
-              If you're looking for clarity around relationships, career, or just trying to understand why certain themes keep showing up in your life, astrology can offer a surprisingly helpful perspective. Each reading is shaped around what you're actually going through, not a script.
-            </p>
-            <div className="credentials">
-              <h3>Background</h3>
-              <ul>
-                <li>My interest in astrology came from trying to figure out my own behaviours</li>
-                <li>For the past 4 years i've been studying every day and for the past 3 years i've been giving paid offerings</li>
-                <li>By now I had Over 50 paid readings and aprox 100 unpaid readings (when i was learning) with people from all walks of life</li>
-                <li>Studied with respected astrologers like Austin Coppock, Demetra George, and Chris Brennan</li>
-              </ul>
+          <h2 className="section-title">Meet Jurgis</h2>
+          <div className="about-layout">
+            <div className="about-image">
+              <img src={portraitImg} alt="Jurgis Lietunovas - Hellenistic Astrologer" loading="lazy" />
             </div>
-            <div className="philosophy">
-              <h3>What We'll Explore</h3>
-              <ul>
-                <li>Your core personality patterns and natural strengths</li>
-                <li>What's happening in your life right now and why certain areas feel challenging</li>
-                <li>The questions you've been carrying about yourself and your path</li>
-                <li>How ancient astrological techniques can shed light on modern problems</li>
-              </ul>
+            <div className="about-text">
+              <h3>From design to the cosmos</h3>
+              <p>
+                I spent over a decade as an Art Director for luxury brands in Seoul and Amsterdam. I understood design, branding, aesthetics—but around 2020, I realized I needed to understand myself with the same depth. That search led me to intensive meditation practice in Nepal and India, and eventually to Hellenistic astrology.
+              </p>
+              <p>
+                After four years of daily study and over 150 readings, I use astrology not to predict the future, but to help people see the patterns shaping their lives. I work with the original Western tradition—whole sign houses, zodiacal releasing, profections—techniques refined over 2,000+ years that offer real clarity around who you are and what's actually happening.
+              </p>
+              <p>
+                This isn't about telling you who to be. It's about understanding the patterns you're working with—whether that's recurring relationship dynamics, career crossroads, or just trying to make sense of why certain themes keep showing up. Each reading is shaped around what you're actually going through, not a script.
+              </p>
+              <p>
+                I've worked with artists, entrepreneurs, therapists, and seekers from all walks of life. Based in Bali now, I offer sessions both in-person (Canggu/Ubud) and online worldwide.
+              </p>
+              <div className="credentials">
+                <h4>Training & Background</h4>
+                <p>
+                  Studied with Austin Coppock (Fundamentals & Electional Astrology), Demetra George (Ancient Astrology in Theory & Practice), and Chris Brennan (Hellenistic Astrology). Former Art Director for luxury brands in Seoul and Amsterdam.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -313,8 +314,8 @@ function App() {
       {/* Client Moments Section */}
       <section className="section client-moments-section">
         <div className="container">
-          <h2 className="section-title">Sessions that resonated</h2>
-          <p className="section-subtitle">faces of my previous clients speak for themselves</p>
+          <h2 className="section-title">Real feedback from real clients</h2>
+          <p className="section-subtitle">Moments from previous readings</p>
         </div>
         <div className="client-photos-carousel">
           <div className="client-photos-track">
@@ -350,7 +351,7 @@ function App() {
       {/* CTA Section */}
       <section className="cta-section">
         <div className="container">
-          <h2>Your chart is calling</h2>
+          <h2>Ready to understand your patterns?</h2>
           <p>Let's explore what the cosmos reveal about your path</p>
           <a href="#booking" className="cta-button large" onClick={handleBookingClick}>book a session</a>
           <p className="guarantee-text">if the reading doesn't click with you, just let me know</p>

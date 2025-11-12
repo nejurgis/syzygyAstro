@@ -269,6 +269,46 @@ Mystical Warm Color Palette:
   background: linear-gradient(to bottom, #FFFBF5 0%, #FFF8E7 100%);
 }
 
+.about-layout {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 60px;
+  align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-image {
+  position: sticky;
+  top: 120px;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(74, 44, 132, 0.15);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.about-text h3 {
+  font-size: 2.8rem;
+  color: #2D1B4E;
+  margin-bottom: 35px;
+  font-family: 'Zalando Sans SemiExpanded', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.about-text p {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: #4A2C5F;
+  margin-bottom: 28px;
+  font-family: 'Zalando Sans SemiExpanded', sans-serif;
+  font-weight: 400;
+}
+
 .about-content {
   max-width: 900px;
   margin: 0 auto;
@@ -285,20 +325,29 @@ Mystical Warm Color Palette:
 
 .credentials {
   margin-top: 40px;
-  padding: 35px 28px;
-  background-color: #FFFBF5;
-  border: 1px solid rgba(212, 175, 55, 0.25);
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(74, 44, 132, 0.06);
+  padding: 30px 25px;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.08) 0%, rgba(107, 73, 132, 0.06) 100%);
+  border-left: 4px solid #6B4984;
+  border-radius: 8px;
 }
 
-.credentials h3 {
-  font-size: 2.2rem;
+.credentials h3,
+.credentials h4 {
+  font-size: 1.6rem;
   color: #2D1B4E;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
   font-weight: 600;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
+}
+
+.credentials p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #4A2C5F;
+  margin: 0;
+  font-family: 'Zalando Sans SemiExpanded', sans-serif;
+  font-weight: 400;
 }
 
 .credentials ul {
@@ -1250,6 +1299,27 @@ Mystical Warm Color Palette:
 
   .hero-description {
     font-size: 1rem;
+  }
+
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-image {
+    position: relative;
+    top: 0;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .about-text h3 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .about-text p {
+    font-size: 1.1rem;
   }
 
   .section {
