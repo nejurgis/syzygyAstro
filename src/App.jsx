@@ -356,7 +356,7 @@ function App() {
       {/* FAQ Section */}
       <section id="faq" className="section faq-section">
         <div className="container">
-          <h2 className="section-title">Questions? Answered.</h2>
+          <h2 className="section-title">FAQ</h2>
           <div className="faq-list">
             {faqs.map((faq, index) => (
               <div key={index} className="faq-item">

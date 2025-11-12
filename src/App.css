@@ -15,6 +15,8 @@ Mystical Warm Color Palette:
   min-height: 100vh;
   background-color: #FFFBF5;
   color: #2D1B4E;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 /* Header */
@@ -74,7 +76,7 @@ Mystical Warm Color Palette:
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 120px 24px 40px;
+  padding: 120px 20px 40px;
   background: linear-gradient(135deg, #1A1F3A 0%, #2D1B4E 50%, #4A2C5F 100%);
   position: relative;
   overflow: hidden;
@@ -245,12 +247,15 @@ Mystical Warm Color Palette:
 
 /* Sections */
 .section {
-  padding: 80px 24px;
+  padding: 80px 0;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .section-title {
@@ -519,8 +524,10 @@ Mystical Warm Color Palette:
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 24px;
+  max-width: 100%;
+  width: 100%;
 }
 
 .service-card {
@@ -568,6 +575,7 @@ Mystical Warm Color Palette:
   margin-bottom: 22px;
   color: #2D1B4E;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
+  line-height: 2.1rem;
   letter-spacing: 1px;
 }
 
@@ -1371,6 +1379,10 @@ Mystical Warm Color Palette:
 }
 
 @media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+
   .header {
     padding: 20px 20px;
   }
@@ -1382,7 +1394,7 @@ Mystical Warm Color Palette:
 
   .hero {
     min-height: 50vh;
-    padding: 100px 20px 30px;
+    padding: 100px 15px 30px;
   }
 
   .hero-title {
@@ -1415,6 +1427,7 @@ Mystical Warm Color Palette:
 
   .about-brief-text p {
     font-size: 1.1rem;
+    line-height: 1.23;
   }
 
   .why-main {
@@ -1447,7 +1460,11 @@ Mystical Warm Color Palette:
   }
 
   .section {
-    padding: 60px 20px;
+    padding: 60px 0;
+  }
+
+  .services-section {
+    padding: 60px 0;
   }
 
   .section-title {
@@ -1550,11 +1567,21 @@ Mystical Warm Color Palette:
 
   .services-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .service-card {
+    padding: 25px 20px;
+  }
+
+  .service-description {
+    line-height: 1.23;
   }
 
   .trust-bar {
     grid-template-columns: 1fr;
     padding: 45px 20px;
+    gap: 7px;
   }
 
   .cta-button {
