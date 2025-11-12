@@ -198,7 +198,7 @@ function App() {
         <div className="hero-content">
           <h1 className="hero-title">Ancient astrology for the modern world</h1>
           <a href="#booking" className="cta-button" onClick={handleBookingClick}>book a reading</a>
-          <p className="guarantee-text">sessions from €75 • if it doesn't resonate, I'll refund you</p>
+          <p className="guarantee-text">sessions from €75 </p>
         </div>
       </section>
 
@@ -249,9 +249,9 @@ function App() {
             <div className="about-brief-text">
               <h2>Hi, I'm Jurgis</h2>
               <p>
-                Former luxury brand art director turned Hellenistic astrologer. I use 2000-year-old techniques to help you understand the mechanics of your life patterns. Based in Bali, reading charts worldwide.
+                Former experience designer and art director turned Hellenistic astrologer. I use 2000-year-old techniques to help you understand the mechanics of your life patterns. Based in Bali, reading charts worldwide.
               </p>
-              <a href="#booking" className="cta-button-secondary" onClick={handleBookingClick}>book a reading</a>
+              <a href="#booking" className="cta-button" onClick={handleBookingClick}>book a reading</a>
             </div>
           </div>
         </div>
@@ -267,7 +267,6 @@ function App() {
             </button>
 
             <div className="testimonial-card-carousel">
-              <div className="stars">{'★'.repeat(testimonials[currentTestimonial].rating)}</div>
               <p className="testimonial-text">"{testimonials[currentTestimonial].text}"</p>
               <div className="testimonial-author">
                 <div className="author-name">{testimonials[currentTestimonial].name}</div>

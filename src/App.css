@@ -1,20 +1,14 @@
 /*
-Mystical Warm Color Palette:
-- Deep Night: #1A1F3A (dark celestial blue)
-- Royal Purple: #4A2C5F (mystical depth)
-- Cosmic Purple: #6B4984 (lighter purple accent)
-- Warm Gold: #D4AF37 (trust, wisdom)
-- Soft Gold: #E8C547 (highlights)
-- Cream: #FFF8E7 (warm backgrounds)
-- Warm White: #FFFBF5 (soft white)
-- Warm Gray: #7A6F6B (muted text)
-- Deep Plum: #2D1B4E (rich headers)
+New Color Palette:
+- Dark Purple: #191244 (text, headers, dark elements)
+- Light Cream: #f2f0d7 (backgrounds)
+- Purple Highlight: #9c6cd2 (accents, buttons, highlights)
 */
 
 .astrology-page {
   min-height: 100vh;
-  background-color: #FFFBF5;
-  color: #2D1B4E;
+  background-color: #f2f0d7;
+  color: #191244;
   overflow-x: hidden;
   width: 100%;
 }
@@ -26,10 +20,10 @@ Mystical Warm Color Palette:
   left: 0;
   right: 0;
   padding: 30px 60px;
-  background: linear-gradient(to bottom, rgba(255, 251, 245, 0.98) 0%, rgba(255, 248, 231, 0.95) 100%);
+  background: linear-gradient(to bottom, rgba(242, 240, 215, 0.98) 0%, rgba(242, 240, 215, 0.95) 100%);
   backdrop-filter: blur(10px);
   z-index: 1000;
-  border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+  border-bottom: 1px solid rgba(156, 108, 210, 0.15);
   transition: all 0.3s ease;
 }
 
@@ -44,7 +38,7 @@ Mystical Warm Color Palette:
 }
 
 .header-nav a {
-  color: #4A2C5F;
+  color: #191244;
   transition: all 0.3s ease;
   text-transform: lowercase;
   position: relative;
@@ -58,7 +52,7 @@ Mystical Warm Color Palette:
   left: 0;
   width: 0;
   height: 1px;
-  background: linear-gradient(to right, #D4AF37, #E8C547);
+  background: linear-gradient(to right, #9c6cd2, #9c6cd2);
   transition: width 0.3s ease;
 }
 
@@ -67,7 +61,7 @@ Mystical Warm Color Palette:
 }
 
 .header-nav a:hover {
-  color: #D4AF37;
+  color: #9c6cd2;
 }
 
 /* Hero Section */
@@ -77,7 +71,7 @@ Mystical Warm Color Palette:
   align-items: center;
   justify-content: center;
   padding: 120px 20px 40px;
-  background: linear-gradient(135deg, #1A1F3A 0%, #2D1B4E 50%, #4A2C5F 100%);
+  background: linear-gradient(135deg, #191244 0%, #191244 50%, #191244 100%);
   position: relative;
   overflow: hidden;
 }
@@ -89,7 +83,7 @@ Mystical Warm Color Palette:
   right: -15%;
   width: 700px;
   height: 700px;
-  background: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(156, 108, 210, 0.08) 0%, transparent 70%);
   border-radius: 50%;
   animation: pulse 8s ease-in-out infinite;
 }
@@ -126,13 +120,13 @@ Mystical Warm Color Palette:
 
 .trust-badge {
   display: inline-block;
-  background-color: rgba(212, 175, 55, 0.15);
-  color: #E8C547;
+  background-color: rgba(156, 108, 210, 0.15);
+  color: #9c6cd2;
   padding: 10px 24px;
   border-radius: 30px;
   font-size: 0.75rem;
   margin-bottom: 35px;
-  border: 1px solid rgba(212, 175, 55, 0.3);
+  border: 1px solid rgba(156, 108, 210, 0.3);
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
   letter-spacing: 1.5px;
   text-transform: lowercase;
@@ -143,7 +137,7 @@ Mystical Warm Color Palette:
   font-size: 6.5rem;
   font-weight: 700;
   margin-bottom: 30px;
-  color: #FFFBF5;
+  color: #f2f0d7;
   line-height: 1;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
   letter-spacing: -1px;
@@ -151,7 +145,7 @@ Mystical Warm Color Palette:
 
 .hero-subtitle {
   font-size: 2.2rem;
-  color: #E8C547;
+  color: #9c6cd2;
   margin-bottom: 35px;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
   font-weight: 400;
@@ -161,7 +155,7 @@ Mystical Warm Color Palette:
 
 .hero-description {
   font-size: 1.35rem;
-  color: rgba(255, 251, 245, 0.9);
+  color: rgba(242, 240, 215, 0.9);
   margin-bottom: 50px;
   line-height: 1.5;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
@@ -174,8 +168,8 @@ Mystical Warm Color Palette:
 .cta-button {
   display: inline-block;
   padding: 20px 55px;
-  background: linear-gradient(135deg, #D4AF37 0%, #E8C547 100%);
-  color: #2D1B4E;
+  background: linear-gradient(135deg, #9c6cd2 0%, #9c6cd2 100%);
+  color: #191244;
   font-size: 1rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -184,14 +178,14 @@ Mystical Warm Color Palette:
   transition: all 0.3s ease;
   border: none;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
-  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.4);
+  box-shadow: 0 4px 20px rgba(156, 108, 210, 0.4);
   line-height: 1;
 }
 
 .cta-button:hover {
-  background: linear-gradient(135deg, #E8C547 0%, #D4AF37 100%);
+  background: linear-gradient(135deg, #9c6cd2 0%, #9c6cd2 100%);
   transform: translateY(-3px);
-  box-shadow: 0 8px 30px rgba(212, 175, 55, 0.6);
+  box-shadow: 0 8px 30px rgba(156, 108, 210, 0.6);
 }
 
 .cta-button.large {
@@ -202,7 +196,7 @@ Mystical Warm Color Palette:
 .guarantee-text {
   margin-top: 25px;
   font-size: 1rem;
-  color: rgba(255, 251, 245, 0.75);
+  color: rgba(242, 240, 215, 0.75);
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -210,15 +204,15 @@ Mystical Warm Color Palette:
 
 /* Trust Bar */
 .trust-bar {
-  background: linear-gradient(to bottom, #FFF8E7 0%, #FFFBF5 100%);
+  background: linear-gradient(to bottom, #f2f0d7 0%, #f2f0d7 100%);
   padding: 50px 24px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
-  border-top: 1px solid rgba(212, 175, 55, 0.2);
-  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  border-top: 1px solid rgba(156, 108, 210, 0.2);
+  border-bottom: 1px solid rgba(156, 108, 210, 0.2);
 }
 
 .trust-item {
@@ -228,7 +222,7 @@ Mystical Warm Color Palette:
 .trust-number {
   font-size: 5rem;
   font-weight: 700;
-  color: #6B4984;
+  color: #9c6cd2;
   margin-bottom: 15px;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
   letter-spacing: -2px;
@@ -237,7 +231,7 @@ Mystical Warm Color Palette:
 
 .trust-label {
   font-size: 1.1rem;
-  color: #7A6F6B;
+  color: rgba(25, 18, 68, 0.6);
   text-transform: lowercase;
   letter-spacing: 0px;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
@@ -263,7 +257,7 @@ Mystical Warm Color Palette:
   font-weight: 700;
   margin-bottom: 50px;
   text-align: center;
-  color: #2D1B4E;
+  color: #191244;
   letter-spacing: -1px;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
   line-height: 1;
@@ -271,7 +265,7 @@ Mystical Warm Color Palette:
 
 /* About Section - Brief Version */
 .about-section-brief {
-  background: linear-gradient(to bottom, #FFFBF5 0%, #FFF8E7 100%);
+  background: linear-gradient(to bottom, #f2f0d7 0%, #f2f0d7 100%);
   padding: 60px 0;
 }
 
@@ -292,13 +286,13 @@ Mystical Warm Color Palette:
   height: 350px;
   object-fit: cover;
   border-radius: 50%;
-  box-shadow: 0 8px 30px rgba(74, 44, 132, 0.15);
-  border: 3px solid rgba(212, 175, 55, 0.3);
+  box-shadow: 0 8px 30px rgba(25, 18, 68, 0.15);
+  border: 3px solid rgba(156, 108, 210, 0.3);
 }
 
 .about-brief-text h2 {
   font-size: 2.5rem;
-  color: #2D1B4E;
+  color: #191244;
   margin-bottom: 20px;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
   font-weight: 600;
@@ -307,7 +301,7 @@ Mystical Warm Color Palette:
 .about-brief-text p {
   font-size: 1.3rem;
   line-height: 1.6;
-  color: #4A2C5F;
+  color: #191244;
   margin-bottom: 30px;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
   font-weight: 400;
@@ -317,8 +311,8 @@ Mystical Warm Color Palette:
   display: inline-block;
   padding: 12px 30px;
   background: transparent;
-  color: #4A2C5F;
-  border: 2px solid #4A2C5F;
+  color: #191244;
+  border: 2px solid #191244;
   text-decoration: none;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
   font-weight: 600;
@@ -330,15 +324,15 @@ Mystical Warm Color Palette:
 }
 
 .cta-button-secondary:hover {
-  background: #4A2C5F;
-  color: #FFFBF5;
+  background: #191244;
+  color: #f2f0d7;
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(74, 44, 132, 0.2);
+  box-shadow: 0 4px 15px rgba(25, 18, 68, 0.2);
 }
 
 /* Why This Works Section */
 .why-section {
-  background: linear-gradient(135deg, rgba(107, 73, 132, 0.08) 0%, rgba(212, 175, 55, 0.08) 100%);
+  background: linear-gradient(135deg, rgba(156, 108, 210, 0.08) 0%, rgba(156, 108, 210, 0.08) 100%);
   text-align: center;
   padding: 80px 0;
 }
@@ -350,7 +344,7 @@ Mystical Warm Color Palette:
 
 .why-main {
   font-size: 2rem;
-  color: #2D1B4E;
+  color: #191244;
   font-weight: 600;
   margin-bottom: 20px;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
@@ -360,14 +354,14 @@ Mystical Warm Color Palette:
 .why-description {
   font-size: 1.3rem;
   line-height: 1.6;
-  color: #4A2C5F;
+  color: #191244;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
   font-weight: 400;
 }
 
 /* About Section - Old (keep for backwards compat if needed) */
 .about-section {
-  background: linear-gradient(to bottom, #FFFBF5 0%, #FFF8E7 100%);
+  background: linear-gradient(to bottom, #f2f0d7 0%, #f2f0d7 100%);
 }
 
 .about-layout {
@@ -388,13 +382,13 @@ Mystical Warm Color Palette:
   width: 100%;
   height: auto;
   border-radius: 12px;
-  box-shadow: 0 8px 30px rgba(74, 44, 132, 0.15);
-  border: 1px solid rgba(212, 175, 55, 0.2);
+  box-shadow: 0 8px 30px rgba(25, 18, 68, 0.15);
+  border: 1px solid rgba(156, 108, 210, 0.2);
 }
 
 .about-text h3 {
   font-size: 2.8rem;
-  color: #2D1B4E;
+  color: #191244;
   margin-bottom: 35px;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
   font-weight: 600;
@@ -404,7 +398,7 @@ Mystical Warm Color Palette:
 .about-text p {
   font-size: 1.25rem;
   line-height: 1.7;
-  color: #4A2C5F;
+  color: #191244;
   margin-bottom: 28px;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
   font-weight: 400;
@@ -418,7 +412,7 @@ Mystical Warm Color Palette:
 .about-content p {
   font-size: 1.4rem;
   line-height: 1.5;
-  color: #4A2C5F;
+  color: #191244;
   margin-bottom: 30px;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
   font-weight: 400;
@@ -427,15 +421,15 @@ Mystical Warm Color Palette:
 .credentials {
   margin-top: 40px;
   padding: 30px 25px;
-  background: linear-gradient(135deg, rgba(212, 175, 55, 0.08) 0%, rgba(107, 73, 132, 0.06) 100%);
-  border-left: 4px solid #6B4984;
+  background: linear-gradient(135deg, rgba(156, 108, 210, 0.08) 0%, rgba(156, 108, 210, 0.06) 100%);
+  border-left: 4px solid #9c6cd2;
   border-radius: 8px;
 }
 
 .credentials h3,
 .credentials h4 {
   font-size: 1.6rem;
-  color: #2D1B4E;
+  color: #191244;
   margin-bottom: 15px;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
   font-weight: 600;
@@ -445,7 +439,7 @@ Mystical Warm Color Palette:
 .credentials p {
   font-size: 1.1rem;
   line-height: 1.6;
-  color: #4A2C5F;
+  color: #191244;
   margin: 0;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
   font-weight: 400;
@@ -459,7 +453,7 @@ Mystical Warm Color Palette:
 .credentials ul li {
   font-size: 1.25rem;
   line-height: 1.5;
-  color: #4A2C5F;
+  color: #191244;
   margin-bottom: 20px;
   padding-left: 35px;
   position: relative;
@@ -471,7 +465,7 @@ Mystical Warm Color Palette:
   content: '✦';
   position: absolute;
   left: 0;
-  color: #D4AF37;
+  color: #9c6cd2;
   font-size: 1.2rem;
   font-weight: 400;
 }
@@ -479,14 +473,14 @@ Mystical Warm Color Palette:
 .philosophy {
   margin-top: 30px;
   padding: 35px 28px;
-  background: linear-gradient(135deg, rgba(212, 175, 55, 0.08) 0%, rgba(107, 73, 132, 0.06) 100%);
-  border-left: 4px solid #6B4984;
+  background: linear-gradient(135deg, rgba(156, 108, 210, 0.08) 0%, rgba(156, 108, 210, 0.06) 100%);
+  border-left: 4px solid #9c6cd2;
   border-radius: 8px;
 }
 
 .philosophy h3 {
   font-size: 2.2rem;
-  color: #2D1B4E;
+  color: #191244;
   margin-bottom: 30px;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
   font-weight: 600;
@@ -501,7 +495,7 @@ Mystical Warm Color Palette:
 .philosophy ul li {
   font-size: 1.25rem;
   line-height: 1.5;
-  color: #4A2C5F;
+  color: #191244;
   margin-bottom: 20px;
   padding-left: 35px;
   position: relative;
@@ -513,13 +507,13 @@ Mystical Warm Color Palette:
   content: '☾';
   position: absolute;
   left: 0;
-  color: #6B4984;
+  color: #9c6cd2;
   font-size: 1.1rem;
 }
 
 /* Services Section */
 .services-section {
-  background: linear-gradient(to bottom, #FFFBF5 0%, #FFF8E7 100%);
+  background: linear-gradient(to bottom, #f2f0d7 0%, #f2f0d7 100%);
 }
 
 .services-grid {
@@ -528,32 +522,35 @@ Mystical Warm Color Palette:
   gap: 24px;
   max-width: 100%;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .service-card {
   padding: 35px 28px;
-  background: linear-gradient(135deg, rgba(255, 251, 245, 0.9) 0%, rgba(255, 248, 231, 0.8) 100%);
-  border: 1px solid rgba(212, 175, 55, 0.25);
+  background: linear-gradient(135deg, rgba(242, 240, 215, 0.9) 0%, rgba(242, 240, 215, 0.8) 100%);
+  border: 1px solid rgba(156, 108, 210, 0.25);
   border-radius: 12px;
   transition: all 0.3s ease;
   position: relative;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 2px 12px rgba(74, 44, 132, 0.06);
+  box-shadow: 0 2px 12px rgba(25, 18, 68, 0.06);
+  box-sizing: border-box;
+  min-width: 0;
 }
 
 .service-card.popular {
-  border-color: #D4AF37;
+  border-color: #9c6cd2;
   border-width: 2px;
-  background: linear-gradient(135deg, rgba(212, 175, 55, 0.12) 0%, rgba(107, 73, 132, 0.08) 100%);
+  background: linear-gradient(135deg, rgba(156, 108, 210, 0.12) 0%, rgba(156, 108, 210, 0.08) 100%);
 }
 
 .popular-badge {
   position: absolute;
   top: -16px;
   right: 28px;
-  background: linear-gradient(135deg, #D4AF37 0%, #E8C547 100%);
-  color: #2D1B4E;
+  background: linear-gradient(135deg, #9c6cd2 0%, #9c6cd2 100%);
+  color: #191244;
   padding: 7px 18px;
   border-radius: 25px;
   font-size: 0.7rem;
@@ -564,16 +561,16 @@ Mystical Warm Color Palette:
 }
 
 .service-card:hover {
-  border-color: #D4AF37;
+  border-color: #9c6cd2;
   transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(212, 175, 55, 0.25);
+  box-shadow: 0 12px 30px rgba(156, 108, 210, 0.25);
 }
 
 .service-title {
   font-size: 2.2rem;
   font-weight: 600;
   margin-bottom: 22px;
-  color: #2D1B4E;
+  color: #191244;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
   line-height: 2.1rem;
   letter-spacing: 1px;
@@ -584,13 +581,13 @@ Mystical Warm Color Palette:
   justify-content: space-between;
   margin-bottom: 25px;
   padding-bottom: 20px;
-  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  border-bottom: 1px solid rgba(156, 108, 210, 0.2);
 }
 
 .service-duration,
 .service-price {
   font-size: 1.05rem;
-  color: #6B4984;
+  color: #9c6cd2;
   font-weight: 600;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
   text-transform: lowercase;
@@ -600,7 +597,7 @@ Mystical Warm Color Palette:
 .service-description {
   font-size: 1.2rem;
   line-height: 1.5;
-  color: #4A2C5F;
+  color: #191244;
   margin-bottom: 30px;
   flex: 1;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
@@ -612,8 +609,8 @@ Mystical Warm Color Palette:
   text-align: center;
   padding: 14px 28px;
   background-color: transparent;
-  color: #6B4984;
-  border: 2px solid #6B4984;
+  color: #9c6cd2;
+  border: 2px solid #9c6cd2;
   border-radius: 50px;
   font-weight: 600;
   transition: all 0.3s ease;
@@ -624,16 +621,16 @@ Mystical Warm Color Palette:
 }
 
 .service-cta:hover {
-  background: linear-gradient(135deg, #D4AF37 0%, #E8C547 100%);
-  border-color: #D4AF37;
-  color: #2D1B4E;
+  background: linear-gradient(135deg, #9c6cd2 0%, #9c6cd2 100%);
+  border-color: #9c6cd2;
+  color: #191244;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+  box-shadow: 0 6px 20px rgba(156, 108, 210, 0.4);
 }
 
 /* Testimonials Section */
 .testimonials-section {
-  background: linear-gradient(to bottom, #FFF8E7 0%, #FFFBF5 100%);
+  background: linear-gradient(to bottom, #f2f0d7 0%, #f2f0d7 100%);
 }
 
 .testimonials-carousel {
@@ -647,35 +644,36 @@ Mystical Warm Color Palette:
 }
 
 .testimonial-card-carousel {
-  padding: 40px 30px;
-  background: linear-gradient(135deg, rgba(255, 251, 245, 0.95) 0%, rgba(255, 248, 231, 0.9) 100%);
-  border: 1px solid rgba(212, 175, 55, 0.2);
+  padding: 35px 30px;
+  background: linear-gradient(135deg, rgba(242, 240, 215, 0.95) 0%, rgba(242, 240, 215, 0.9) 100%);
+  border: 1px solid rgba(156, 108, 210, 0.2);
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(74, 44, 132, 0.08);
+  box-shadow: 0 4px 20px rgba(25, 18, 68, 0.08);
   flex: 1;
-  min-height: 280px;
+  height: 420px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   transition: all 0.3s ease;
+  overflow: hidden;
 }
 
 .testimonial-card-carousel:hover {
-  border-color: #D4AF37;
-  box-shadow: 0 8px 30px rgba(212, 175, 55, 0.2);
+  border-color: #9c6cd2;
+  box-shadow: 0 8px 30px rgba(156, 108, 210, 0.2);
 }
 
 .carousel-button {
-  background: linear-gradient(135deg, #D4AF37 0%, #E8C547 100%);
+  background: linear-gradient(135deg, #9c6cd2 0%, #9c6cd2 100%);
   border: none;
-  color: #2D1B4E;
+  color: #191244;
   font-size: 1.2rem;
-  width: 40px;
-  height: 40px;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(212, 175, 55, 0.3);
+  box-shadow: 0 2px 8px rgba(156, 108, 210, 0.3);
   flex-shrink: 0;
   font-weight: 300;
   line-height: 1;
@@ -686,8 +684,8 @@ Mystical Warm Color Palette:
 
 .carousel-button:hover {
   transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.5);
-  background: linear-gradient(135deg, #E8C547 0%, #D4AF37 100%);
+  box-shadow: 0 4px 12px rgba(156, 108, 210, 0.5);
+  background: linear-gradient(135deg, #9c6cd2 0%, #9c6cd2 100%);
 }
 
 .carousel-button:active {
@@ -705,7 +703,7 @@ Mystical Warm Color Palette:
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  border: 2px solid #D4AF37;
+  border: 2px solid #9c6cd2;
   background: transparent;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -713,12 +711,12 @@ Mystical Warm Color Palette:
 }
 
 .dot.active {
-  background: #D4AF37;
+  background: #9c6cd2;
   transform: scale(1.2);
 }
 
 .dot:hover {
-  background: rgba(212, 175, 55, 0.5);
+  background: rgba(156, 108, 210, 0.5);
 }
 
 .testimonials-grid {
@@ -729,44 +727,44 @@ Mystical Warm Color Palette:
 
 .testimonial-card {
   padding: 40px;
-  background: linear-gradient(135deg, rgba(255, 251, 245, 0.95) 0%, rgba(255, 248, 231, 0.9) 100%);
-  border: 1px solid rgba(212, 175, 55, 0.2);
+  background: linear-gradient(135deg, rgba(242, 240, 215, 0.95) 0%, rgba(242, 240, 215, 0.9) 100%);
+  border: 1px solid rgba(156, 108, 210, 0.2);
   border-radius: 12px;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 12px rgba(74, 44, 132, 0.06);
+  box-shadow: 0 2px 12px rgba(25, 18, 68, 0.06);
 }
 
 .testimonial-card:hover {
-  border-color: #D4AF37;
+  border-color: #9c6cd2;
   transform: translateY(-4px);
-  box-shadow: 0 10px 28px rgba(212, 175, 55, 0.2);
+  box-shadow: 0 10px 28px rgba(156, 108, 210, 0.2);
 }
 
 .stars {
-  color: #D4AF37;
+  color: #9c6cd2;
   font-size: 1rem;
-  margin-bottom: 22px;
+  margin-bottom: 18px;
   letter-spacing: 2px;
 }
 
 .testimonial-text {
-  font-size: 1.25rem;
-  line-height: 1.5;
-  color: #4A2C5F;
-  margin-bottom: 30px;
+  font-size: 1rem;
+  line-height: 1.23;
+  color: #191244;
+  margin-bottom: 22px;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
   font-weight: 400;
   font-style: italic;
 }
 
 .testimonial-author {
-  border-top: 1px solid rgba(212, 175, 55, 0.2);
-  padding-top: 25px;
+  border-top: 1px solid rgba(156, 108, 210, 0.2);
+  padding-top: 20px;
 }
 
 .author-name {
   font-weight: 600;
-  color: #2D1B4E;
+  color: #191244;
   font-size: 1.15rem;
   margin-bottom: 8px;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
@@ -774,21 +772,21 @@ Mystical Warm Color Palette:
 
 .author-role {
   font-size: 1rem;
-  color: #7A6F6B;
+  color: rgba(25, 18, 68, 0.6);
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
   font-weight: 400;
 }
 
 /* Client Moments Section */
 .client-moments-section {
-  background: linear-gradient(to bottom, #FFFBF5 0%, #FFF8E7 100%);
+  background: linear-gradient(to bottom, #f2f0d7 0%, #f2f0d7 100%);
   padding: 80px 24px;
 }
 
 .client-moments-section .section-subtitle {
   text-align: center;
   font-size: 1.2rem;
-  color: #7A6F6B;
+  color: rgba(25, 18, 68, 0.6);
   margin-bottom: 40px;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
   font-weight: 400;
@@ -826,17 +824,17 @@ Mystical Warm Color Palette:
   position: relative;
   overflow: hidden;
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.25);
+  box-shadow: 0 4px 20px rgba(156, 108, 210, 0.25);
   transition: all 0.4s ease;
   aspect-ratio: 4/3;
-  background-color: #2D1B4E;
+  background-color: #191244;
   flex-shrink: 0;
   width: 400px;
 }
 
 .client-photo:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 32px rgba(212, 175, 55, 0.45);
+  box-shadow: 0 12px 32px rgba(156, 108, 210, 0.45);
 }
 
 .client-photo img {
@@ -853,7 +851,7 @@ Mystical Warm Color Palette:
 
 /* CTA Section */
 .cta-section {
-  background: linear-gradient(135deg, #2D1B4E 0%, #4A2C5F 50%, #6B4984 100%);
+  background: linear-gradient(135deg, #191244 0%, #191244 50%, #9c6cd2 100%);
   padding: 80px 24px;
   text-align: center;
   position: relative;
@@ -866,7 +864,7 @@ Mystical Warm Color Palette:
   top: 10%;
   right: 15%;
   font-size: 3rem;
-  color: rgba(212, 175, 55, 0.15);
+  color: rgba(156, 108, 210, 0.15);
   animation: twinkle 4s ease-in-out infinite;
 }
 
@@ -893,7 +891,7 @@ Mystical Warm Color Palette:
   font-size: 4.5rem;
   font-weight: 400;
   margin-bottom: 30px;
-  color: #FFFBF5;
+  color: #f2f0d7;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
   letter-spacing: 2px;
   line-height: 1.1;
@@ -901,7 +899,7 @@ Mystical Warm Color Palette:
 
 .cta-section p {
   font-size: 1.5rem;
-  color: rgba(255, 251, 245, 0.85);
+  color: rgba(242, 240, 215, 0.85);
   margin-bottom: 50px;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
   font-weight: 400;
@@ -909,7 +907,7 @@ Mystical Warm Color Palette:
 
 /* FAQ Section */
 .faq-section {
-  background: linear-gradient(to bottom, #FFF8E7 0%, #FFFBF5 100%);
+  background: linear-gradient(to bottom, #f2f0d7 0%, #f2f0d7 100%);
 }
 
 .faq-list {
@@ -919,16 +917,16 @@ Mystical Warm Color Palette:
 
 .faq-item {
   margin-bottom: 18px;
-  border: 1px solid rgba(212, 175, 55, 0.25);
+  border: 1px solid rgba(156, 108, 210, 0.25);
   border-radius: 12px;
   overflow: hidden;
-  background: linear-gradient(135deg, rgba(255, 251, 245, 0.9) 0%, rgba(255, 248, 231, 0.8) 100%);
+  background: linear-gradient(135deg, rgba(242, 240, 215, 0.9) 0%, rgba(242, 240, 215, 0.8) 100%);
   transition: all 0.3s ease;
 }
 
 .faq-item:hover {
-  border-color: #D4AF37;
-  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.15);
+  border-color: #9c6cd2;
+  box-shadow: 0 4px 15px rgba(156, 108, 210, 0.15);
 }
 
 .faq-question {
@@ -936,7 +934,7 @@ Mystical Warm Color Palette:
   padding: 32px 40px;
   background-color: transparent;
   border: none;
-  color: #2D1B4E;
+  color: #191244;
   font-size: 1.3rem;
   font-weight: 600;
   text-align: left;
@@ -949,16 +947,16 @@ Mystical Warm Color Palette:
 }
 
 .faq-question:hover {
-  color: #6B4984;
+  color: #9c6cd2;
 }
 
 .faq-question.active {
-  color: #6B4984;
+  color: #9c6cd2;
 }
 
 .faq-icon {
   font-size: 1.6rem;
-  color: #D4AF37;
+  color: #9c6cd2;
   font-weight: 300;
   transition: transform 0.3s ease;
 }
@@ -969,7 +967,7 @@ Mystical Warm Color Palette:
 
 .faq-answer {
   padding: 0 40px 35px 40px;
-  color: #4A2C5F;
+  color: #191244;
   font-size: 1.2rem;
   line-height: 1.5;
   animation: fadeIn 0.3s ease;
@@ -990,7 +988,7 @@ Mystical Warm Color Palette:
 
 /* Booking Section */
 .booking-section {
-  background: linear-gradient(to bottom, #FFFBF5 0%, #FFF8E7 100%);
+  background: linear-gradient(to bottom, #f2f0d7 0%, #f2f0d7 100%);
 }
 
 .booking-content {
@@ -1002,7 +1000,7 @@ Mystical Warm Color Palette:
 
 .booking-info h3 {
   font-size: 2.2rem;
-  color: #2D1B4E;
+  color: #191244;
   margin-bottom: 28px;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
   font-weight: 600;
@@ -1012,7 +1010,7 @@ Mystical Warm Color Palette:
 .booking-info p {
   font-size: 1.3rem;
   line-height: 1.5;
-  color: #4A2C5F;
+  color: #191244;
   margin-bottom: 28px;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
   font-weight: 400;
@@ -1027,7 +1025,7 @@ Mystical Warm Color Palette:
 .booking-info ul li {
   font-size: 1.2rem;
   line-height: 1.5;
-  color: #4A2C5F;
+  color: #191244;
   margin-bottom: 18px;
   padding-left: 32px;
   position: relative;
@@ -1039,20 +1037,20 @@ Mystical Warm Color Palette:
   content: '✦';
   position: absolute;
   left: 0;
-  color: #D4AF37;
+  color: #9c6cd2;
   font-weight: 400;
 }
 
 .guarantee-box {
-  background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(107, 73, 132, 0.08) 100%);
-  border: 2px solid rgba(212, 175, 55, 0.3);
+  background: linear-gradient(135deg, rgba(156, 108, 210, 0.1) 0%, rgba(156, 108, 210, 0.08) 100%);
+  border: 2px solid rgba(156, 108, 210, 0.3);
   border-radius: 12px;
   padding: 32px;
   margin-top: 35px;
 }
 
 .guarantee-box h4 {
-  color: #6B4984;
+  color: #9c6cd2;
   font-size: 1.5rem;
   margin-bottom: 18px;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
@@ -1060,7 +1058,7 @@ Mystical Warm Color Palette:
 }
 
 .guarantee-box p {
-  color: #4A2C5F;
+  color: #191244;
   font-size: 1.2rem;
   margin: 0;
   line-height: 1.5;
@@ -1072,8 +1070,8 @@ Mystical Warm Color Palette:
 
 .iframe-placeholder {
   padding: 70px 45px;
-  background: linear-gradient(135deg, rgba(255, 251, 245, 0.9) 0%, rgba(255, 248, 231, 0.8) 100%);
-  border: 2px dashed rgba(212, 175, 55, 0.3);
+  background: linear-gradient(135deg, rgba(242, 240, 215, 0.9) 0%, rgba(242, 240, 215, 0.8) 100%);
+  border: 2px dashed rgba(156, 108, 210, 0.3);
   border-radius: 12px;
   text-align: center;
   min-height: 500px;
@@ -1085,7 +1083,7 @@ Mystical Warm Color Palette:
 
 .placeholder-text {
   font-size: 1.25rem;
-  color: #6B4984;
+  color: #9c6cd2;
   margin-bottom: 18px;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
   font-weight: 600;
@@ -1093,7 +1091,7 @@ Mystical Warm Color Palette:
 
 .placeholder-instruction {
   font-size: 0.95rem;
-  color: #7A6F6B;
+  color: rgba(25, 18, 68, 0.6);
   max-width: 500px;
   line-height: 1.5;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
@@ -1101,17 +1099,17 @@ Mystical Warm Color Palette:
 }
 
 .placeholder-instruction code {
-  background-color: rgba(212, 175, 55, 0.15);
+  background-color: rgba(156, 108, 210, 0.15);
   padding: 3px 8px;
   border-radius: 4px;
-  color: #6B4984;
+  color: #9c6cd2;
   font-size: 0.85rem;
   font-weight: 500;
 }
 
 /* Contact Section */
 .contact-section {
-  background: linear-gradient(to bottom, #FFF8E7 0%, #FFFBF5 100%);
+  background: linear-gradient(to bottom, #f2f0d7 0%, #f2f0d7 100%);
 }
 
 .contact-content {
@@ -1123,7 +1121,7 @@ Mystical Warm Color Palette:
 .contact-content p {
   font-size: 1.4rem;
   line-height: 1.5;
-  color: #4A2C5F;
+  color: #191244;
   margin-bottom: 50px;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
   font-weight: 400;
@@ -1138,21 +1136,21 @@ Mystical Warm Color Palette:
 
 .contact-link {
   font-size: 1.25rem;
-  color: #6B4984;
+  color: #9c6cd2;
   transition: all 0.3s ease;
   padding: 18px 42px;
-  border: 2px solid #6B4984;
+  border: 2px solid #9c6cd2;
   border-radius: 50px;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
   font-weight: 500;
 }
 
 .contact-link:hover {
-  background: linear-gradient(135deg, #D4AF37 0%, #E8C547 100%);
-  border-color: #D4AF37;
-  color: #2D1B4E;
+  background: linear-gradient(135deg, #9c6cd2 0%, #9c6cd2 100%);
+  border-color: #9c6cd2;
+  color: #191244;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3);
+  box-shadow: 0 6px 20px rgba(156, 108, 210, 0.3);
 }
 
 .social-links {
@@ -1162,21 +1160,21 @@ Mystical Warm Color Palette:
 
 .social-links a {
   font-size: 1.05rem;
-  color: #7A6F6B;
+  color: rgba(25, 18, 68, 0.6);
   transition: all 0.3s ease;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
   font-weight: 500;
 }
 
 .social-links a:hover {
-  color: #D4AF37;
+  color: #9c6cd2;
 }
 
 /* Footer */
 .footer {
   padding: 70px 40px;
-  background: linear-gradient(135deg, #1A1F3A 0%, #2D1B4E 100%);
-  color: #FFFBF5;
+  background: linear-gradient(135deg, #191244 0%, #191244 100%);
+  color: #f2f0d7;
 }
 
 .footer-content {
@@ -1186,7 +1184,7 @@ Mystical Warm Color Palette:
 }
 
 .footer-content p {
-  color: rgba(255, 251, 245, 0.7);
+  color: rgba(242, 240, 215, 0.7);
   font-size: 0.9rem;
   margin-bottom: 16px;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
@@ -1201,20 +1199,20 @@ Mystical Warm Color Palette:
 }
 
 .footer-links a {
-  color: rgba(255, 251, 245, 0.7);
+  color: rgba(242, 240, 215, 0.7);
   transition: color 0.3s ease;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
   font-weight: 400;
 }
 
 .footer-links a:hover {
-  color: #E8C547;
+  color: #9c6cd2;
 }
 
 .footer-note {
   font-size: 0.8rem;
   font-style: italic;
-  color: rgba(255, 251, 245, 0.5);
+  color: rgba(242, 240, 215, 0.5);
 }
 
 /* Email Popup */
@@ -1234,8 +1232,8 @@ Mystical Warm Color Palette:
 }
 
 .popup-content {
-  background: linear-gradient(135deg, rgba(255, 251, 245, 0.98) 0%, rgba(255, 248, 231, 0.95) 100%);
-  border: 1px solid rgba(212, 175, 55, 0.3);
+  background: linear-gradient(135deg, rgba(242, 240, 215, 0.98) 0%, rgba(242, 240, 215, 0.95) 100%);
+  border: 1px solid rgba(156, 108, 210, 0.3);
   border-radius: 16px;
   padding: 55px 48px;
   max-width: 520px;
@@ -1251,7 +1249,7 @@ Mystical Warm Color Palette:
   right: 22px;
   background: none;
   border: none;
-  color: #7A6F6B;
+  color: rgba(25, 18, 68, 0.6);
   font-size: 2rem;
   cursor: pointer;
   transition: color 0.3s ease;
@@ -1261,12 +1259,12 @@ Mystical Warm Color Palette:
 }
 
 .popup-close:hover {
-  color: #D4AF37;
+  color: #9c6cd2;
 }
 
 .popup-content h2 {
   font-size: 2.2rem;
-  color: #2D1B4E;
+  color: #191244;
   margin-bottom: 16px;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
   font-weight: 600;
@@ -1275,7 +1273,7 @@ Mystical Warm Color Palette:
 
 .popup-content p {
   font-size: 1.1rem;
-  color: #4A2C5F;
+  color: #191244;
   margin-bottom: 32px;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
   font-weight: 400;
@@ -1286,10 +1284,10 @@ Mystical Warm Color Palette:
   width: 100%;
   padding: 16px 22px;
   font-size: 1rem;
-  background-color: #FFFBF5;
-  border: 2px solid rgba(212, 175, 55, 0.3);
+  background-color: #f2f0d7;
+  border: 2px solid rgba(156, 108, 210, 0.3);
   border-radius: 50px;
-  color: #2D1B4E;
+  color: #191244;
   margin-bottom: 22px;
   transition: all 0.3s ease;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
@@ -1297,15 +1295,15 @@ Mystical Warm Color Palette:
 
 .popup-input:focus {
   outline: none;
-  border-color: #D4AF37;
-  box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.15);
+  border-color: #9c6cd2;
+  box-shadow: 0 0 0 4px rgba(156, 108, 210, 0.15);
 }
 
 .popup-button {
   width: 100%;
   padding: 16px 32px;
-  background: linear-gradient(135deg, #D4AF37 0%, #E8C547 100%);
-  color: #2D1B4E;
+  background: linear-gradient(135deg, #9c6cd2 0%, #9c6cd2 100%);
+  color: #191244;
   border: none;
   border-radius: 50px;
   font-size: 0.95rem;
@@ -1318,14 +1316,14 @@ Mystical Warm Color Palette:
 }
 
 .popup-button:hover {
-  background: linear-gradient(135deg, #E8C547 0%, #D4AF37 100%);
+  background: linear-gradient(135deg, #9c6cd2 0%, #9c6cd2 100%);
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+  box-shadow: 0 8px 25px rgba(156, 108, 210, 0.4);
 }
 
 .popup-privacy {
   font-size: 0.8rem;
-  color: #7A6F6B;
+  color: rgba(25, 18, 68, 0.6);
   margin-top: 18px;
   font-family: 'Zalando Sans SemiExpanded', sans-serif;
   font-weight: 400;
@@ -1339,8 +1337,8 @@ Mystical Warm Color Palette:
 .success-icon {
   width: 85px;
   height: 85px;
-  background: linear-gradient(135deg, #D4AF37 0%, #E8C547 100%);
-  color: #2D1B4E;
+  background: linear-gradient(135deg, #9c6cd2 0%, #9c6cd2 100%);
+  color: #191244;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -1516,12 +1514,12 @@ Mystical Warm Color Palette:
 
   .testimonial-card-carousel {
     padding: 30px 20px;
-    min-height: 240px;
+    height: 360px;
   }
 
   .carousel-button {
-    width: 35px;
-    height: 35px;
+    width: 18px;
+    height: 18px;
     font-size: 1rem;
   }
 
@@ -1572,6 +1570,8 @@ Mystical Warm Color Palette:
 
   .service-card {
     padding: 25px 20px;
+    min-width: 0;
+    box-sizing: border-box;
   }
 
   .service-description {
@@ -1600,6 +1600,20 @@ Mystical Warm Color Palette:
   }
 }
 
+@media (max-width: 412px) {
+  .container {
+    padding: 0 12px;
+  }
+
+  .service-card {
+    padding: 22px 16px;
+  }
+
+  .services-grid {
+    gap: 18px;
+  }
+}
+
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
@@ -1607,6 +1621,6 @@ html {
 
 /* Accessibility */
 :focus-visible {
-  outline: 2px solid #5B7C8D;
+  outline: 2px solid #9c6cd2;
   outline-offset: 3px;
 }
