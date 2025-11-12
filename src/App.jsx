@@ -232,13 +232,13 @@ function App() {
             <div className="about-text">
               <h3>From design to the cosmos</h3>
               <p>
-                I spent over a decade as an Art Director for luxury brands in Seoul and Amsterdam. I understood design, branding, aesthetics—but around 2020, I realized I needed to understand myself with the same depth. That search led me to intensive meditation practice in Nepal and India, and eventually to Hellenistic astrology.
+                I spent over a decade as an Art Director for luxury brands in Seoul and Amsterdam. Around 2020, I realized I needed to understand myself with the same depth I understood design. That search led me to intensive meditation practice in Nepal and India, and eventually to Hellenistic astrology.
               </p>
               <p>
-                After four years of daily study and over 150 readings, I use astrology not to predict the future, but to help people see the patterns shaping their lives. I work with the original Western tradition—whole sign houses, zodiacal releasing, profections—techniques refined over 2,000+ years that offer real clarity around who you are and what's actually happening.
+                After four years of daily study and over 150 readings, I use astrology to help people see the patterns shaping their lives—not to predict the future, but to offer real clarity around what's actually happening. I work with the original Western tradition: whole sign houses, zodiacal releasing, profections. Techniques refined over 2,000+ years.
               </p>
               <p>
-                This isn't about telling you who to be. It's about understanding the patterns you're working with—whether that's recurring relationship dynamics, career crossroads, or just trying to make sense of why certain themes keep showing up. Each reading is shaped around what you're actually going through, not a script.
+                Each reading is shaped around what you're going through—recurring relationship dynamics, career crossroads, or just trying to make sense of why certain themes keep showing up. It's not about telling you who to be. It's about understanding the patterns you're working with.
               </p>
               <p>
                 I've worked with artists, entrepreneurs, therapists, and seekers from all walks of life. Based in Bali now, I offer sessions both in-person (Canggu/Ubud) and online worldwide.
