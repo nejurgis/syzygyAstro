@@ -196,10 +196,7 @@ function App() {
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-content">
-          <h1 className="hero-title">Astrology readings that reveal the patterns you're already living</h1>
-          <p className="hero-description">
-            real techniques • real patterns • real clarity
-          </p>
+          <h1 className="hero-title">Ancient astrology for the modern world</h1>
           <a href="#booking" className="cta-button" onClick={handleBookingClick}>book a reading</a>
           <p className="guarantee-text">sessions from €75 • if it doesn't resonate, I'll refund you</p>
         </div>
@@ -224,7 +221,7 @@ function App() {
       {/* Services Section - Moved up for conversion optimization */}
       <section id="services" className="section services-section">
         <div className="container">
-          <h2 className="section-title">Your reading awaits</h2>
+          <h2 className="section-title">Consultation types</h2>
           <div className="services-grid">
             {services.map((service) => (
               <div key={service.id} className={`service-card ${service.popular ? 'popular' : ''}`}>
@@ -350,7 +347,7 @@ function App() {
       <section className="cta-section">
         <div className="container">
           <h2>Ready to understand your patterns?</h2>
-          <p>Let's explore what the cosmos reveal about your path</p>
+          <p>Let's look at your chart</p>
           <a href="#booking" className="cta-button large" onClick={handleBookingClick}>book a session</a>
           <p className="guarantee-text">if the reading doesn't click with you, just let me know</p>
         </div>
