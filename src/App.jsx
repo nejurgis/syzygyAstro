@@ -221,7 +221,28 @@ function App() {
         </div>
       </section>
 
-      {/* About Section */}
+      {/* Services Section - Moved up for conversion optimization */}
+      <section id="services" className="section services-section">
+        <div className="container">
+          <h2 className="section-title">Your reading awaits</h2>
+          <div className="services-grid">
+            {services.map((service) => (
+              <div key={service.id} className={`service-card ${service.popular ? 'popular' : ''}`}>
+                {service.popular && <div className="popular-badge">most requested</div>}
+                <h3 className="service-title">{service.title}</h3>
+                <div className="service-meta">
+                  <span className="service-duration">{service.duration}</span>
+                  <span className="service-price">{service.price}</span>
+                </div>
+                <p className="service-description">{service.description}</p>
+                <a href="#booking" className="service-cta" onClick={handleBookingClick}>BOOK A READING</a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* About Section - Moved after services for better conversion flow */}
       <section id="about" className="section about-section">
         <div className="container">
           <h2 className="section-title">Meet Jurgis</h2>
@@ -250,27 +271,6 @@ function App() {
                 </p>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section id="services" className="section services-section">
-        <div className="container">
-          <h2 className="section-title">Your reading awaits</h2>
-          <div className="services-grid">
-            {services.map((service) => (
-              <div key={service.id} className={`service-card ${service.popular ? 'popular' : ''}`}>
-                {service.popular && <div className="popular-badge">most requested</div>}
-                <h3 className="service-title">{service.title}</h3>
-                <div className="service-meta">
-                  <span className="service-duration">{service.duration}</span>
-                  <span className="service-price">{service.price}</span>
-                </div>
-                <p className="service-description">{service.description}</p>
-                <a href="#booking" className="service-cta" onClick={handleBookingClick}>BOOK A READING</a>
-              </div>
-            ))}
           </div>
         </div>
       </section>
