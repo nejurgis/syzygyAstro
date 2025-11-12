@@ -196,9 +196,9 @@ function App() {
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-content">
-          <h1 className="hero-title">Astrology Readings in Bali and beyond</h1>
+          <h1 className="hero-title">Astrology readings that reveal the patterns you're already living</h1>
           <p className="hero-description">
-            Understand your birth chart • discover patterns in your relationships & life path • find clarity through time tested techniques
+            real techniques • real patterns • real clarity
           </p>
           <a href="#booking" className="cta-button" onClick={handleBookingClick}>book a reading</a>
           <p className="guarantee-text">sessions from €75 • if it doesn't resonate, I'll refund you</p>
@@ -242,34 +242,19 @@ function App() {
         </div>
       </section>
 
-      {/* About Section - Moved after services for better conversion flow */}
-      <section id="about" className="section about-section">
+      {/* About Section - Concise one-liner version */}
+      <section id="about" className="section about-section-brief">
         <div className="container">
-          <h2 className="section-title">Meet Jurgis</h2>
-          <div className="about-layout">
-            <div className="about-image">
+          <div className="about-brief">
+            <div className="about-brief-image">
               <img src={portraitImg} alt="Jurgis Lietunovas - Hellenistic Astrologer" loading="lazy" />
             </div>
-            <div className="about-text">
-              <h3>From design to the cosmos</h3>
+            <div className="about-brief-text">
+              <h2>Hi, I'm Jurgis</h2>
               <p>
-                I spent over a decade as an Art Director for luxury brands in Seoul and Amsterdam. Around 2020, I realized I needed to understand myself with the same depth I understood design. That search led me to intensive meditation practice in Nepal and India, and eventually to Hellenistic astrology.
+                Former luxury brand art director turned Hellenistic astrologer. I use 2000-year-old techniques to help you understand the mechanics of your life patterns. Based in Bali, reading charts worldwide.
               </p>
-              <p>
-                After four years of daily study and over 150 readings, I use astrology to help people see the patterns shaping their lives—not to predict the future, but to offer real clarity around what's actually happening. I work with the original Western tradition: whole sign houses, zodiacal releasing, profections. Techniques refined over 2,000+ years.
-              </p>
-              <p>
-                Each reading is shaped around what you're going through—recurring relationship dynamics, career crossroads, or just trying to make sense of why certain themes keep showing up. It's not about telling you who to be. It's about understanding the patterns you're working with.
-              </p>
-              <p>
-                I've worked with artists, entrepreneurs, therapists, and seekers from all walks of life. Based in Bali now, I offer sessions both in-person (Canggu/Ubud) and online worldwide.
-              </p>
-              <div className="credentials">
-                <h4>Training & Background</h4>
-                <p>
-                  Studied with Austin Coppock (Fundamentals & Electional Astrology), Demetra George (Ancient Astrology in Theory & Practice), and Chris Brennan (Hellenistic Astrology). Former Art Director for luxury brands in Seoul and Amsterdam.
-                </p>
-              </div>
+              <a href="#booking" className="cta-button-secondary" onClick={handleBookingClick}>book a reading</a>
             </div>
           </div>
         </div>
@@ -307,6 +292,19 @@ function App() {
                 aria-label={`Go to testimonial ${index + 1}`}
               />
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why This Works Section */}
+      <section className="section why-section">
+        <div className="container">
+          <h2 className="section-title">Not your Instagram horoscope</h2>
+          <div className="why-content">
+            <p className="why-main">Real techniques. Real patterns. Real clarity.</p>
+            <p className="why-description">
+              No manifestation speak. No cosmic bypassing. Just ancient methods that actually map what you're experiencing.
+            </p>
           </div>
         </div>
       </section>

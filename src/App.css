@@ -264,7 +264,103 @@ Mystical Warm Color Palette:
   line-height: 1;
 }
 
-/* About Section */
+/* About Section - Brief Version */
+.about-section-brief {
+  background: linear-gradient(to bottom, #FFFBF5 0%, #FFF8E7 100%);
+  padding: 60px 0;
+}
+
+.about-brief {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-brief-image {
+  flex-shrink: 0;
+}
+
+.about-brief-image img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 8px 30px rgba(74, 44, 132, 0.15);
+  border: 3px solid rgba(212, 175, 55, 0.3);
+}
+
+.about-brief-text h2 {
+  font-size: 2.5rem;
+  color: #2D1B4E;
+  margin-bottom: 20px;
+  font-family: 'Zalando Sans SemiExpanded', sans-serif;
+  font-weight: 600;
+}
+
+.about-brief-text p {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: #4A2C5F;
+  margin-bottom: 30px;
+  font-family: 'Zalando Sans SemiExpanded', sans-serif;
+  font-weight: 400;
+}
+
+.cta-button-secondary {
+  display: inline-block;
+  padding: 12px 30px;
+  background: transparent;
+  color: #4A2C5F;
+  border: 2px solid #4A2C5F;
+  text-decoration: none;
+  font-family: 'Zalando Sans SemiExpanded', sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: lowercase;
+  letter-spacing: 1px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.cta-button-secondary:hover {
+  background: #4A2C5F;
+  color: #FFFBF5;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(74, 44, 132, 0.2);
+}
+
+/* Why This Works Section */
+.why-section {
+  background: linear-gradient(135deg, rgba(107, 73, 132, 0.08) 0%, rgba(212, 175, 55, 0.08) 100%);
+  text-align: center;
+  padding: 80px 0;
+}
+
+.why-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.why-main {
+  font-size: 2rem;
+  color: #2D1B4E;
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-family: 'Zalando Sans SemiExpanded', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.why-description {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: #4A2C5F;
+  font-family: 'Zalando Sans SemiExpanded', sans-serif;
+  font-weight: 400;
+}
+
+/* About Section - Old (keep for backwards compat if needed) */
 .about-section {
   background: linear-gradient(to bottom, #FFFBF5 0%, #FFF8E7 100%);
 }
@@ -1299,6 +1395,33 @@ Mystical Warm Color Palette:
 
   .hero-description {
     font-size: 1rem;
+  }
+
+  .about-brief {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .about-brief-image img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .about-brief-text h2 {
+    font-size: 2rem;
+  }
+
+  .about-brief-text p {
+    font-size: 1.1rem;
+  }
+
+  .why-main {
+    font-size: 1.5rem;
+  }
+
+  .why-description {
+    font-size: 1.1rem;
   }
 
   .about-layout {
