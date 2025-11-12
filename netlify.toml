@@ -8,6 +8,16 @@
 [functions]
   directory = "netlify/functions"
 
+# Pre-render the site for better SEO and crawler access
+[[plugins]]
+  package = "@netlify/plugin-lighthouse"
+
+# Redirect rules for SPA
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
 # Environment variables (set these in Netlify dashboard)
 # FB_CONVERSIONS_API_TOKEN = "your-access-token"
 # FB_PIXEL_ID = "815934864526504"
