@@ -56,14 +56,22 @@ function App() {
 
     // Submit to Netlify Forms
     const formElement = e.target
+    const formDataToSubmit = new FormData(formElement)
+
+    console.log('Submitting form to Netlify...', Object.fromEntries(formDataToSubmit))
+
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(new FormData(formElement)).toString()
+      body: new URLSearchParams(formDataToSubmit).toString()
+    })
+    .then(response => {
+      console.log('Netlify response:', response.status, response.statusText)
+      return response
     })
     .then(() => {
       setBookingSubmitted(true)
-      console.log('Booking inquiry submitted successfully')
+      console.log('Booking inquiry submitted successfully to Netlify')
     })
     .catch((error) => console.error('Form submission error:', error))
   }
