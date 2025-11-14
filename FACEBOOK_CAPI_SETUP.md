@@ -172,6 +172,31 @@ trackConversion('Purchase', {
 - **Improved Match Rates**: Better user matching with hashed data
 - **Privacy Compliant**: Secure hashing of personal information
 
+## 🎯 NEW: Enhanced Match Quality (8-10/10)
+
+Your implementation now captures **8 user data parameters** for superior Facebook matching:
+
+**Standard Parameters (Always sent):**
+- ✅ IP Address
+- ✅ User Agent
+- ✅ _fbp (Facebook Browser ID)
+- ✅ _fbc (Facebook Click ID)
+
+**Enhanced Parameters (From Acuity bookings):**
+- ✅ Email (hashed)
+- ✅ Phone (hashed)
+- ✅ First Name (hashed)
+- ✅ Last Name (hashed)
+- ✅ City/State/Country (if collected)
+
+### Testing Your Match Quality
+
+See **PAYLOAD_HELPER_GUIDE.md** for detailed instructions on:
+- Using Facebook's Payload Helper tool
+- Verifying your match quality score
+- Troubleshooting low match rates
+- Ensuring Acuity sends user data properly
+
 ## Support
 
 If you encounter any issues:

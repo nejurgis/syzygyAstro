@@ -1624,3 +1624,282 @@ html {
   outline: 2px solid #9c6cd2;
   outline-offset: 3px;
 }
+
+/* Booking Popup */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(25, 18, 68, 0.85);
+  backdrop-filter: blur(8px);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn 0.3s ease;
+  overflow-y: auto;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.popup-content {
+  background: #f2f0d7;
+  border-radius: 16px;
+  padding: 50px 50px 40px;
+  max-width: 600px;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  animation: slideUp 0.4s ease;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.popup-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  color: #191244;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  border-radius: 50%;
+}
+
+.popup-close:hover {
+  background: rgba(156, 108, 210, 0.1);
+  transform: rotate(90deg);
+}
+
+.popup-content h2 {
+  font-family: 'Zalando Sans SemiExpanded', sans-serif;
+  font-size: 2.2rem;
+  margin: 0 0 10px 0;
+  color: #191244;
+  font-weight: 600;
+}
+
+.popup-subtitle {
+  font-size: 1rem;
+  color: rgba(25, 18, 68, 0.7);
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+/* Form Styles */
+.popup-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #191244;
+  letter-spacing: 0.3px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 14px 16px;
+  border: 2px solid rgba(156, 108, 210, 0.2);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: 'Zalando Sans SemiExpanded', sans-serif;
+  background: #fff;
+  color: #191244;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #9c6cd2;
+  box-shadow: 0 0 0 3px rgba(156, 108, 210, 0.1);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(25, 18, 68, 0.4);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+  line-height: 1.5;
+}
+
+.form-group select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23191244' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 20px;
+  padding-right: 40px;
+}
+
+/* Success Message */
+.success-message {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.success-message h2 {
+  color: #191244;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.success-message p {
+  font-size: 1.1rem;
+  color: rgba(25, 18, 68, 0.8);
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.success-message .cta-button {
+  margin-top: 20px;
+}
+
+/* Booking Section Updates */
+.booking-info-center {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.booking-info-center h3 {
+  font-size: 1.8rem;
+  margin: 40px 0 20px;
+  color: #191244;
+  font-family: 'Zalando Sans SemiExpanded', sans-serif;
+  font-weight: 600;
+}
+
+.booking-intro {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: rgba(25, 18, 68, 0.8);
+  line-height: 1.6;
+}
+
+.booking-info-center ul {
+  text-align: left;
+  max-width: 500px;
+  margin: 0 auto 40px;
+  list-style: none;
+  padding: 0;
+}
+
+.booking-info-center ul li {
+  padding: 12px 0;
+  padding-left: 30px;
+  position: relative;
+  color: rgba(25, 18, 68, 0.8);
+  line-height: 1.5;
+}
+
+.booking-info-center ul li::before {
+  content: '☾';
+  position: absolute;
+  left: 0;
+  color: #9c6cd2;
+  font-size: 1.1rem;
+}
+
+/* Service CTA Button Update */
+.service-cta {
+  background: none;
+  border: none;
+  font-family: 'Zalando Sans SemiExpanded', sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .popup-content {
+    padding: 40px 30px 30px;
+    max-height: 85vh;
+  }
+
+  .popup-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .booking-info-center ul {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .popup-content {
+    padding: 35px 20px 25px;
+  }
+
+  .popup-content h2 {
+    font-size: 1.6rem;
+  }
+
+  .popup-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 12px 14px;
+    font-size: 0.95rem;
+  }
+}

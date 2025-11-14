@@ -160,6 +160,20 @@
         <p>Sessions from €75 • 100% money-back guarantee if it doesn't resonate</p>
       </div>
     </noscript>
+
+    <!-- Hidden form for Netlify Forms detection -->
+    <form name="booking" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="firstName" />
+      <input type="text" name="lastName" />
+      <input type="email" name="email" />
+      <input type="tel" name="phone" />
+      <input type="text" name="service" />
+      <input type="date" name="birthDate" />
+      <input type="time" name="birthTime" />
+      <input type="text" name="birthPlace" />
+      <textarea name="message"></textarea>
+    </form>
+
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
     <script src="https://t.contentsquare.net/uxa/4ba5f37ac71ff.js"></script>

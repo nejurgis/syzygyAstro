@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import './App.css'
-import { trackInitiateCheckout, trackSchedule, trackPurchase } from './utils/tracking'
+import { trackLead } from './utils/tracking'
 import portraitImg from './assets/portrait.jpg'
 import clientPhoto1 from './assets/1-compressed.jpg'
 import clientPhoto2 from './assets/2-compressed.jpg'
@@ -8,74 +8,64 @@ import clientPhoto3 from './assets/3-compressed.jpg'
 import clientPhoto4 from './assets/4-compressed.jpg'
 
 function App() {
-  const [showEmailPopup, setShowEmailPopup] = useState(false)
-  const [emailSubmitted, setEmailSubmitted] = useState(false)
+  const [showBookingPopup, setShowBookingPopup] = useState(false)
+  const [bookingSubmitted, setBookingSubmitted] = useState(false)
   const [faqOpen, setFaqOpen] = useState({})
   const [currentTestimonial, setCurrentTestimonial] = useState(0)
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    service: '',
+    birthDate: '',
+    birthTime: '',
+    birthPlace: '',
+    message: ''
+  })
 
-  // Exit-intent popup
-  useEffect(() => {
-    const handleMouseLeave = (e) => {
-      if (e.clientY <= 0 && !emailSubmitted && !localStorage.getItem('emailCaptured')) {
-        setShowEmailPopup(true)
-      }
+  const handleBookingClick = (e, serviceName = '') => {
+    e?.preventDefault()
+    setShowBookingPopup(true)
+    if (serviceName) {
+      setFormData(prev => ({ ...prev, service: serviceName }))
+    }
+  }
+
+  const handleFormChange = (e) => {
+    const { name, value } = e.target
+    setFormData(prev => ({ ...prev, [name]: value }))
+  }
+
+  const handleFormSubmit = async (e) => {
+    e.preventDefault()
+
+    // Track Lead event with Facebook CAPI - HIGH MATCH QUALITY!
+    const userData = {
+      email: formData.email,
+      firstName: formData.firstName,
+      lastName: formData.lastName,
+      phone: formData.phone || null
     }
 
-    // Show popup after 30 seconds if not already shown
-    const timer = setTimeout(() => {
-      if (!emailSubmitted && !localStorage.getItem('emailCaptured')) {
-        setShowEmailPopup(true)
-      }
-    }, 30000)
+    // Track with Facebook (client + server)
+    await trackLead(formData.email, {
+      contentName: formData.service || 'Astrology Reading',
+      contentCategory: 'Consultation Inquiry'
+    }, userData)
 
-    document.addEventListener('mouseout', handleMouseLeave)
-    return () => {
-      document.removeEventListener('mouseout', handleMouseLeave)
-      clearTimeout(timer)
-    }
-  }, [emailSubmitted])
-
-  // Setup Acuity Scheduling tracking
-  useEffect(() => {
-    // Listen for Acuity scheduling events
-    window.addEventListener('message', function(event) {
-      // Make sure message is from Acuity Scheduling
-      if (event.origin !== 'https://app.acuityscheduling.com') return;
-
-      try {
-        const data = JSON.parse(event.data);
-
-        // Track when user successfully schedules an appointment
-        if (data.type === 'appointment.scheduled') {
-          console.log('Appointment scheduled:', data);
-
-          // Track Schedule event
-          trackSchedule({
-            contentName: data.appointmentType || 'Astrology Reading',
-            contentCategory: 'Booking'
-          });
-
-          // If payment was made, track Purchase event
-          if (data.payment && data.payment.amount) {
-            trackPurchase(
-              data.payment.amount,
-              data.payment.currency || 'EUR',
-              {
-                contentName: data.appointmentType || 'Astrology Reading',
-                appointmentId: data.id
-              }
-            );
-          }
-        }
-      } catch (e) {
-        // Ignore messages that aren't JSON
-      }
-    });
-  }, [])
-
-  const handleBookingClick = () => {
-    // Track conversion event with both client and server-side tracking
-    trackInitiateCheckout()
+    // Submit to Netlify Forms
+    const formElement = e.target
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(new FormData(formElement)).toString()
+    })
+    .then(() => {
+      setBookingSubmitted(true)
+      console.log('Booking inquiry submitted successfully')
+    })
+    .catch((error) => console.error('Form submission error:', error))
   }
 
   const toggleFAQ = (index) => {
@@ -232,7 +222,7 @@ function App() {
                   <span className="service-price">{service.price}</span>
                 </div>
                 <p className="service-description">{service.description}</p>
-                <a href="#booking" className="service-cta" onClick={handleBookingClick}>BOOK A READING</a>
+                <button className="service-cta" onClick={(e) => handleBookingClick(e, service.title)}>BOOK A READING</button>
               </div>
             ))}
           </div>
@@ -378,40 +368,182 @@ function App() {
       {/* Booking Section */}
       <section id="booking" className="section booking-section">
         <div className="container">
-          <h2 className="section-title">What to expect</h2>
+          <h2 className="section-title">Ready to book a reading?</h2>
           <div className="booking-content">
-            <div className="booking-info">
-              
-              <p>
-                We'll meet via video call or in person (Bali). After you book, you'll get:
+            <div className="booking-info-center">
+              <p className="booking-intro">
+                Share your details and I'll get back to you within 24 hours to arrange a time that works for you.
               </p>
+
+              <h3>What to expect</h3>
               <ul>
-                <li>A questionnaire to help me prepare for your session via e-mail</li>
-                <li>Video call link sent 12 hours before your appointment</li>
+                <li>We'll meet via video call or in person (Bali)</li>
+                <li>After booking, I'll send you a questionnaire to prepare</li>
+                <li>Video call link sent 12 hours before your session</li>
                 <li>Recording of the session for your records</li>
               </ul>
+
+              <button className="cta-button large" onClick={handleBookingClick}>
+                Book Your Session
+              </button>
+
               <div className="guarantee-box">
                 <h4>☾ My promise</h4>
                 <p>If the reading doesn't resonate with you or feel helpful, just reach out within a day and I'll give you a full refund. Simple as that.</p>
               </div>
             </div>
-
-            {/* Acuity Scheduling Iframe */}
-            <div className="scheduling-container">
-              <iframe
-                src="https://app.acuityscheduling.com/schedule.php?owner=37428029&ref=embedded_csp"
-                title="Schedule Appointment"
-                width="100%"
-                height="800"
-                style={{ border: 0 }}
-                allow="payment"
-                loading="lazy"
-              ></iframe>
-              <script src="https://embed.acuityscheduling.com/js/embed.js" type="text/javascript"></script>
-            </div>
           </div>
         </div>
       </section>
+
+      {/* Booking Form Popup */}
+      {showBookingPopup && (
+        <div className="popup-overlay" onClick={() => setShowBookingPopup(false)}>
+          <div className="popup-content" onClick={(e) => e.stopPropagation()}>
+            <button className="popup-close" onClick={() => setShowBookingPopup(false)}>×</button>
+
+            {!bookingSubmitted ? (
+              <>
+                <h2>Book Your Reading</h2>
+                <p className="popup-subtitle">Fill out the form below and I'll get back to you within 24 hours to arrange a time.</p>
+
+                <form
+                  name="booking"
+                  method="POST"
+                  data-netlify="true"
+                  onSubmit={handleFormSubmit}
+                >
+                  <input type="hidden" name="form-name" value="booking" />
+
+                  <div className="form-row">
+                    <div className="form-group">
+                      <label htmlFor="firstName">First Name *</label>
+                      <input
+                        type="text"
+                        id="firstName"
+                        name="firstName"
+                        value={formData.firstName}
+                        onChange={handleFormChange}
+                        required
+                      />
+                    </div>
+                    <div className="form-group">
+                      <label htmlFor="lastName">Last Name *</label>
+                      <input
+                        type="text"
+                        id="lastName"
+                        name="lastName"
+                        value={formData.lastName}
+                        onChange={handleFormChange}
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div className="form-group">
+                    <label htmlFor="email">Email *</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleFormChange}
+                      required
+                    />
+                  </div>
+
+                  <div className="form-group">
+                    <label htmlFor="phone">Phone (optional)</label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleFormChange}
+                      placeholder="+1234567890"
+                    />
+                  </div>
+
+                  <div className="form-group">
+                    <label htmlFor="service">Service Interested In *</label>
+                    <select
+                      id="service"
+                      name="service"
+                      value={formData.service}
+                      onChange={handleFormChange}
+                      required
+                    >
+                      <option value="">Select a service</option>
+                      <option value="Natal Chart Reading">Natal Chart Reading (75 min - €99)</option>
+                      <option value="Timing (Electional) Consultation">Timing Consultation (60 min - €75)</option>
+                      <option value="Astrocartography">Astrocartography (60 min - €75)</option>
+                    </select>
+                  </div>
+
+                  <div className="form-row">
+                    <div className="form-group">
+                      <label htmlFor="birthDate">Birth Date *</label>
+                      <input
+                        type="date"
+                        id="birthDate"
+                        name="birthDate"
+                        value={formData.birthDate}
+                        onChange={handleFormChange}
+                        required
+                      />
+                    </div>
+                    <div className="form-group">
+                      <label htmlFor="birthTime">Birth Time *</label>
+                      <input
+                        type="time"
+                        id="birthTime"
+                        name="birthTime"
+                        value={formData.birthTime}
+                        onChange={handleFormChange}
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div className="form-group">
+                    <label htmlFor="birthPlace">Birth Place (City, Country) *</label>
+                    <input
+                      type="text"
+                      id="birthPlace"
+                      name="birthPlace"
+                      value={formData.birthPlace}
+                      onChange={handleFormChange}
+                      placeholder="e.g., London, UK"
+                      required
+                    />
+                  </div>
+
+                  <div className="form-group">
+                    <label htmlFor="message">Questions or Message (optional)</label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleFormChange}
+                      rows="4"
+                      placeholder="Any specific areas you'd like to focus on?"
+                    ></textarea>
+                  </div>
+
+                  <button type="submit" className="cta-button large">Submit Booking Request</button>
+                </form>
+              </>
+            ) : (
+              <div className="success-message">
+                <h2>✓ Thank you!</h2>
+                <p>I'll get back to you within 24 hours to arrange your session.</p>
+                <p>Check your email ({formData.email}) for confirmation.</p>
+                <button className="cta-button" onClick={() => setShowBookingPopup(false)}>Close</button>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
 
       {/* Contact Section */}
       <section id="contact" className="section contact-section">

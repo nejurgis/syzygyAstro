@@ -72,15 +72,16 @@ export async function trackConversion(eventName, eventData = {}) {
 }
 
 // Specific tracking functions for common events
-export function trackLead(email, customData = {}) {
+export function trackLead(email, customData = {}, userData = {}) {
   return trackConversion('Lead', {
     email,
     customData,
+    userData,
     gtagEvent: {
       action: 'generate_lead',
       params: {
         event_category: 'engagement',
-        event_label: 'free_guide_download'
+        event_label: 'consultation_inquiry'
       }
     }
   });
@@ -98,9 +99,11 @@ export function trackInitiateCheckout(customData = {}) {
   });
 }
 
-export function trackSchedule(customData = {}) {
+export function trackSchedule(customData = {}, userData = {}) {
   return trackConversion('Schedule', {
     customData,
+    userData,
+    email: userData.email || null,
     gtagEvent: {
       action: 'schedule_appointment',
       params: {
@@ -111,13 +114,15 @@ export function trackSchedule(customData = {}) {
   });
 }
 
-export function trackPurchase(value, currency = 'EUR', customData = {}) {
+export function trackPurchase(value, currency = 'EUR', customData = {}, userData = {}) {
   return trackConversion('Purchase', {
     customData: {
       value,
       currency,
       ...customData
     },
+    userData,
+    email: userData.email || null,
     gtagEvent: {
       action: 'purchase',
       params: {
