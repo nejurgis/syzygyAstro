@@ -74,7 +74,7 @@ exports.handler = async (event, context) => {
       user.setEmail(hashData(email));
     }
 
-    // Add additional user data if provided
+    // Add additional user data if provided (all hashed for privacy)
     if (userData.firstName) user.setFirstName(hashData(userData.firstName));
     if (userData.lastName) user.setLastName(hashData(userData.lastName));
     if (userData.phone) user.setPhone(hashData(userData.phone));
@@ -82,6 +82,7 @@ exports.handler = async (event, context) => {
     if (userData.state) user.setState(hashData(userData.state));
     if (userData.zip) user.setZipCode(hashData(userData.zip));
     if (userData.country) user.setCountryCode(hashData(userData.country));
+    if (userData.dateOfBirth) user.setDateOfBirth(hashData(userData.dateOfBirth)); // Format: YYYYMMDD
 
     // Build CustomData for the event
     const custom = new CustomData();

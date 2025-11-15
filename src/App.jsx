@@ -40,12 +40,36 @@ function App() {
   const handleFormSubmit = async (e) => {
     e.preventDefault()
 
+    // Parse birth place to extract city and country
+    const parseBirthPlace = (birthPlace) => {
+      if (!birthPlace) return { city: null, country: null };
+      const parts = birthPlace.split(',').map(p => p.trim());
+      if (parts.length >= 2) {
+        return {
+          city: parts[0],
+          country: parts[parts.length - 1]
+        };
+      }
+      return { city: parts[0] || null, country: null };
+    };
+
+    const { city, country } = parseBirthPlace(formData.birthPlace);
+
+    // Extract date of birth components (YYYYMMDD format for Facebook)
+    const formatDateOfBirth = (dateStr) => {
+      if (!dateStr) return null;
+      return dateStr.replace(/-/g, ''); // Convert YYYY-MM-DD to YYYYMMDD
+    };
+
     // Track Lead event with Facebook CAPI - HIGH MATCH QUALITY!
     const userData = {
       email: formData.email,
       firstName: formData.firstName,
       lastName: formData.lastName,
-      phone: formData.phone || null
+      phone: formData.phone || null,
+      dateOfBirth: formatDateOfBirth(formData.birthDate),
+      city: city,
+      country: country
     }
 
     // Track with Facebook (client + server)
