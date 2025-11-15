@@ -49,10 +49,16 @@ function App() {
     }
 
     // Track with Facebook (client + server)
+    console.log('📊 Tracking Lead event with Facebook Pixel...')
+    console.log('User Data:', userData)
+    console.log('Service:', formData.service)
+
     await trackLead(formData.email, {
       contentName: formData.service || 'Astrology Reading',
       contentCategory: 'Consultation Inquiry'
     }, userData)
+
+    console.log('✅ Facebook tracking completed')
 
     // Submit to Netlify Forms
     const formElement = e.target

@@ -204,6 +204,32 @@
         'https://connect.facebook.net/en_US/fbevents.js');
         fbq('init', '815934864526504');
         fbq('track', 'PageView');
+
+        // Debug helper - check if pixel loaded correctly
+        setTimeout(() => {
+          if (window.fbq) {
+            console.log('✅ Facebook Pixel loaded successfully!');
+            console.log('📊 Pixel ID: 815934864526504');
+            console.log('💡 TIP: To test Lead event, use: window.testFacebookLead()');
+
+            // Add test function to window for easy testing
+            window.testFacebookLead = function() {
+              console.log('🧪 Testing Facebook Lead event...');
+              window.fbq('track', 'Lead', {
+                content_name: 'Test Lead',
+                content_category: 'Test'
+              });
+              console.log('✅ Test Lead event fired!');
+              console.log('Check Facebook Events Manager to see if it appears.');
+            };
+          } else {
+            console.error('❌ Facebook Pixel failed to load!');
+            console.log('This could be due to:');
+            console.log('1. Ad blocker blocking the pixel');
+            console.log('2. Network issues');
+            console.log('3. Browser privacy settings');
+          }
+        }, 2000);
       });
     </script>
   </body>

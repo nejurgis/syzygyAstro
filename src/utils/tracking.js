@@ -26,9 +26,16 @@ export async function trackConversion(eventName, eventData = {}) {
 
   // 1. Track with client-side Facebook Pixel (with event_id for deduplication)
   if (window.fbq) {
+    console.log(`🎯 Firing Facebook Pixel: ${eventName}`, {
+      eventId,
+      data: eventData.customData || {}
+    });
     window.fbq('track', eventName, eventData.customData || {}, {
       eventID: eventId
     });
+    console.log('✅ Facebook Pixel fired successfully');
+  } else {
+    console.warn('⚠️ Facebook Pixel (fbq) not found on window object');
   }
 
   // 2. Track with Google Analytics (if present)
@@ -38,35 +45,39 @@ export async function trackConversion(eventName, eventData = {}) {
 
   // 3. Track with server-side Facebook Conversions API
   try {
+    console.log('📡 Sending to Facebook Conversions API (server-side)...');
+    const payload = {
+      eventName,
+      eventId,
+      email: eventData.email || null,
+      fbp,
+      fbc,
+      sourceUrl: window.location.href,
+      userData: eventData.userData || {},
+      customData: eventData.customData || {}
+    };
+    console.log('Payload:', payload);
+
     const response = await fetch('/.netlify/functions/track-conversion', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({
-        eventName,
-        eventId,
-        email: eventData.email || null,
-        fbp,
-        fbc,
-        sourceUrl: window.location.href,
-        userData: eventData.userData || {},
-        customData: eventData.customData || {}
-      })
+      body: JSON.stringify(payload)
     });
 
     const result = await response.json();
 
     if (!result.success) {
-      console.warn('Server-side tracking warning:', result.error);
+      console.warn('⚠️ Server-side tracking warning:', result.error);
     } else {
-      console.log('Conversion tracked successfully:', eventName, eventId);
+      console.log('✅ Server-side conversion tracked successfully:', eventName, eventId);
     }
 
     return result;
   } catch (error) {
     // Don't block user experience if tracking fails
-    console.warn('Server-side tracking failed:', error);
+    console.warn('❌ Server-side tracking failed:', error);
     return { success: false, error: error.message };
   }
 }
