@@ -84,6 +84,17 @@ exports.handler = async (event, context) => {
     if (userData.country) user.setCountryCode(hashData(userData.country));
     if (userData.dateOfBirth) user.setDateOfBirth(hashData(userData.dateOfBirth)); // Format: YYYYMMDD
 
+    // Log what user data we're sending (for debugging)
+    console.log('User data being sent to Facebook:', {
+      hasEmail: !!email,
+      hasFirstName: !!userData.firstName,
+      hasLastName: !!userData.lastName,
+      hasPhone: !!userData.phone,
+      hasCity: !!userData.city,
+      hasCountry: !!userData.country,
+      hasDateOfBirth: !!userData.dateOfBirth
+    });
+
     // Build CustomData for the event
     const custom = new CustomData();
     if (customData.value) custom.setValue(customData.value);
