@@ -39,10 +39,15 @@ export async function trackConversion(eventName, eventData = {}) {
   }
 
   // 2. Track with Google Analytics (if present)
-  if (window.gtag && eventData.gtagEvent) {
-    console.log(`📊 Firing Google Analytics: ${eventData.gtagEvent.action}`, eventData.gtagEvent.params);
-    window.gtag('event', eventData.gtagEvent.action, eventData.gtagEvent.params || {});
-    console.log('✅ Google Analytics event fired successfully');
+  if (eventData.gtagEvent) {
+    if (window.gtag) {
+      console.log(`📊 Firing Google Analytics: ${eventData.gtagEvent.action}`, eventData.gtagEvent.params);
+      window.gtag('event', eventData.gtagEvent.action, eventData.gtagEvent.params || {});
+      console.log('✅ Google Analytics event fired successfully');
+    } else {
+      console.warn('⚠️ Google Analytics (gtag) not loaded - event not sent to GA4');
+      console.log('Expected event:', eventData.gtagEvent.action, eventData.gtagEvent.params);
+    }
   }
 
   // 3. Track with server-side Facebook Conversions API

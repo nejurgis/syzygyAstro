@@ -179,18 +179,22 @@
     <script src="https://t.contentsquare.net/uxa/4ba5f37ac71ff.js"></script>
     <!-- Load analytics after page is fully loaded for better performance -->
     <script>
+      // Initialize Google Analytics early (before page load)
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      window.gtag = gtag; // Make gtag globally available
+      gtag('js', new Date());
+
       window.addEventListener('load', function() {
-        // Google Analytics
+        // Google Analytics - Load script
         var gaScript = document.createElement('script');
         gaScript.async = true;
         gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-V333F0GNXX';
         document.head.appendChild(gaScript);
 
         gaScript.onload = function() {
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
           gtag('config', 'G-V333F0GNXX');
+          console.log('📊 Google Analytics script loaded');
         };
 
         // Facebook Pixel
@@ -214,14 +218,19 @@
             console.log('✅ Facebook Pixel loaded successfully!');
             console.log('📊 Pixel ID: 815934864526504');
             console.log('💡 TIP: To test SubmitApplication event, use: window.testSubmitApplication()');
+          }
 
-            // Check Google Analytics
+          // Check Google Analytics with retry
+          const checkGA = () => {
             if (window.gtag) {
               console.log('✅ Google Analytics loaded successfully!');
               console.log('📊 GA4 ID: G-V333F0GNXX');
             } else {
-              console.warn('⚠️ Google Analytics not loaded yet (may still be initializing)');
+              console.warn('⚠️ Google Analytics not loaded yet, checking again...');
+              setTimeout(checkGA, 1000);
             }
+          };
+          checkGA();
 
             // Add test function to window for easy testing
             window.testSubmitApplication = function() {
