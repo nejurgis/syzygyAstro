@@ -12,6 +12,11 @@
     <meta name="author" content="Jurgis Lietunovas" />
     <meta name="robots" content="index, follow" />
 
+    <!-- Preconnect to external domains for faster loading -->
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+    <link rel="preconnect" href="https://connect.facebook.net" crossorigin>
+    <link rel="dns-prefetch" href="https://t.contentsquare.net">
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://syzygyastro.netlify.app/" />
@@ -176,7 +181,6 @@
 
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
-    <script src="https://t.contentsquare.net/uxa/4ba5f37ac71ff.js"></script>
     <!-- Load analytics after page is fully loaded for better performance -->
     <script>
       // Initialize Google Analytics early (before page load)
@@ -196,6 +200,14 @@
           gtag('config', 'G-V333F0GNXX');
           console.log('📊 Google Analytics script loaded');
         };
+
+        // Load Contentsquare after everything else (low priority)
+        setTimeout(function() {
+          var csScript = document.createElement('script');
+          csScript.async = true;
+          csScript.src = 'https://t.contentsquare.net/uxa/4ba5f37ac71ff.js';
+          document.head.appendChild(csScript);
+        }, 3000);
 
         // Facebook Pixel
         !function(f,b,e,v,n,t,s)
