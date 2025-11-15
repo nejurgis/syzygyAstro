@@ -220,7 +220,9 @@
 
             // Add test function to window for easy testing
             window.testSubmitApplication = function() {
-              console.log('🧪 Testing Facebook SubmitApplication event...');
+              console.log('🧪 Testing SubmitApplication event (Facebook + GA4)...');
+
+              // Facebook Pixel
               window.fbq('track', 'SubmitApplication', {
                 value: 99,
                 currency: 'EUR',
@@ -231,8 +233,24 @@
               }, {
                 eventID: 'test-' + Date.now()
               });
-              console.log('✅ Test SubmitApplication event fired with value: €99');
-              console.log('Check Facebook Events Manager to see if it appears.');
+              console.log('✅ Facebook SubmitApplication event fired');
+
+              // Google Analytics
+              if (window.gtag) {
+                window.gtag('event', 'submit_application', {
+                  event_category: 'engagement',
+                  event_label: 'booking_form_submission',
+                  value: 99,
+                  currency: 'EUR',
+                  service_name: 'Test Astrology Reading',
+                  content_category: 'Consultation'
+                });
+                console.log('✅ GA4 submit_application event fired');
+              } else {
+                console.warn('⚠️ GA4 not loaded yet');
+              }
+
+              console.log('Check Facebook Events Manager and GA4 Realtime to see events.');
             };
           } else {
             console.error('❌ Facebook Pixel failed to load!');
