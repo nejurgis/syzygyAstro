@@ -213,21 +213,22 @@
           if (window.fbq) {
             console.log('✅ Facebook Pixel loaded successfully!');
             console.log('📊 Pixel ID: 815934864526504');
-            console.log('💡 TIP: To test Lead event, use: window.testFacebookLead()');
+            console.log('💡 TIP: To test SubmitApplication event, use: window.testSubmitApplication()');
 
             // Add test function to window for easy testing
-            window.testFacebookLead = function() {
-              console.log('🧪 Testing Facebook Lead event...');
-              window.fbq('track', 'Lead', {
+            window.testSubmitApplication = function() {
+              console.log('🧪 Testing Facebook SubmitApplication event...');
+              window.fbq('track', 'SubmitApplication', {
                 value: 99,
                 currency: 'EUR',
                 content_name: 'Test Astrology Reading',
                 content_category: 'Consultation Inquiry',
-                content_type: 'product'
+                content_type: 'product',
+                predicted_ltv: 99
               }, {
                 eventID: 'test-' + Date.now()
               });
-              console.log('✅ Test Lead event fired with value: €99');
+              console.log('✅ Test SubmitApplication event fired with value: €99');
               console.log('Check Facebook Events Manager to see if it appears.');
             };
           } else {

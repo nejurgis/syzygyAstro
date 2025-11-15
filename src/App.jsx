@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import './App.css'
-import { trackLead } from './utils/tracking'
+import { trackSubmitApplication } from './utils/tracking'
 import portraitImg from './assets/portrait.jpg'
 import clientPhoto1 from './assets/1-compressed.jpg'
 import clientPhoto2 from './assets/2-compressed.jpg'
@@ -49,19 +49,20 @@ function App() {
     }
 
     // Track with Facebook (client + server)
-    console.log('📊 Tracking Lead event with Facebook Pixel...')
+    console.log('📊 Tracking SubmitApplication event with Facebook Pixel...')
     console.log('User Data:', userData)
     console.log('Service:', formData.service)
 
     // Determine value based on service selected
     const serviceValue = formData.service?.includes('Natal') ? 99 : 75
 
-    await trackLead(formData.email, {
+    await trackSubmitApplication(formData.email, {
       value: serviceValue,
       currency: 'EUR',
       contentName: formData.service || 'Astrology Reading',
       contentCategory: 'Consultation Inquiry',
-      content_type: 'product'
+      content_type: 'product',
+      predicted_ltv: serviceValue // Lifetime value prediction for Facebook optimization
     }, userData)
 
     console.log('✅ Facebook tracking completed')

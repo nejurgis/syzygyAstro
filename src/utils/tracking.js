@@ -98,6 +98,21 @@ export function trackLead(email, customData = {}, userData = {}) {
   });
 }
 
+export function trackSubmitApplication(email, customData = {}, userData = {}) {
+  return trackConversion('SubmitApplication', {
+    email,
+    customData,
+    userData,
+    gtagEvent: {
+      action: 'submit_application',
+      params: {
+        event_category: 'engagement',
+        event_label: 'booking_form_submission'
+      }
+    }
+  });
+}
+
 export function trackInitiateCheckout(customData = {}) {
   return trackConversion('InitiateCheckout', {
     customData,
