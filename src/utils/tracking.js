@@ -40,7 +40,9 @@ export async function trackConversion(eventName, eventData = {}) {
 
   // 2. Track with Google Analytics (if present)
   if (window.gtag && eventData.gtagEvent) {
+    console.log(`📊 Firing Google Analytics: ${eventData.gtagEvent.action}`, eventData.gtagEvent.params);
     window.gtag('event', eventData.gtagEvent.action, eventData.gtagEvent.params || {});
+    console.log('✅ Google Analytics event fired successfully');
   }
 
   // 3. Track with server-side Facebook Conversions API
@@ -107,7 +109,11 @@ export function trackSubmitApplication(email, customData = {}, userData = {}) {
       action: 'submit_application',
       params: {
         event_category: 'engagement',
-        event_label: 'booking_form_submission'
+        event_label: 'booking_form_submission',
+        value: customData.value || 0,
+        currency: customData.currency || 'EUR',
+        service_name: customData.contentName || 'Unknown Service',
+        content_category: customData.contentCategory || 'Consultation'
       }
     }
   });

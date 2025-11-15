@@ -215,6 +215,14 @@
             console.log('📊 Pixel ID: 815934864526504');
             console.log('💡 TIP: To test SubmitApplication event, use: window.testSubmitApplication()');
 
+            // Check Google Analytics
+            if (window.gtag) {
+              console.log('✅ Google Analytics loaded successfully!');
+              console.log('📊 GA4 ID: G-V333F0GNXX');
+            } else {
+              console.warn('⚠️ Google Analytics not loaded yet (may still be initializing)');
+            }
+
             // Add test function to window for easy testing
             window.testSubmitApplication = function() {
               console.log('🧪 Testing Facebook SubmitApplication event...');
