@@ -218,19 +218,6 @@
             console.log('✅ Facebook Pixel loaded successfully!');
             console.log('📊 Pixel ID: 815934864526504');
             console.log('💡 TIP: To test SubmitApplication event, use: window.testSubmitApplication()');
-          }
-
-          // Check Google Analytics with retry
-          const checkGA = () => {
-            if (window.gtag) {
-              console.log('✅ Google Analytics loaded successfully!');
-              console.log('📊 GA4 ID: G-V333F0GNXX');
-            } else {
-              console.warn('⚠️ Google Analytics not loaded yet, checking again...');
-              setTimeout(checkGA, 1000);
-            }
-          };
-          checkGA();
 
             // Add test function to window for easy testing
             window.testSubmitApplication = function() {
@@ -255,6 +242,18 @@
             console.log('2. Network issues');
             console.log('3. Browser privacy settings');
           }
+
+          // Check Google Analytics with retry
+          const checkGA = () => {
+            if (window.gtag) {
+              console.log('✅ Google Analytics loaded successfully!');
+              console.log('📊 GA4 ID: G-V333F0GNXX');
+            } else {
+              console.warn('⚠️ Google Analytics not loaded yet, checking again...');
+              setTimeout(checkGA, 1000);
+            }
+          };
+          checkGA();
         }, 2000);
       });
     </script>
