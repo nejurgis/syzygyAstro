@@ -53,9 +53,15 @@ function App() {
     console.log('User Data:', userData)
     console.log('Service:', formData.service)
 
+    // Determine value based on service selected
+    const serviceValue = formData.service?.includes('Natal') ? 99 : 75
+
     await trackLead(formData.email, {
+      value: serviceValue,
+      currency: 'EUR',
       contentName: formData.service || 'Astrology Reading',
-      contentCategory: 'Consultation Inquiry'
+      contentCategory: 'Consultation Inquiry',
+      content_type: 'product'
     }, userData)
 
     console.log('✅ Facebook tracking completed')

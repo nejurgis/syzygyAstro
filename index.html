@@ -202,7 +202,10 @@
         t.src=v;s=b.getElementsByTagName(e)[0];
         s.parentNode.insertBefore(t,s)}(window, document,'script',
         'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '815934864526504');
+        fbq('init', '815934864526504', {
+          autoConfig: false,  // Disable automatic configuration
+          em: 'auto'          // Keep email matching
+        });
         fbq('track', 'PageView');
 
         // Debug helper - check if pixel loaded correctly
@@ -216,10 +219,15 @@
             window.testFacebookLead = function() {
               console.log('🧪 Testing Facebook Lead event...');
               window.fbq('track', 'Lead', {
-                content_name: 'Test Lead',
-                content_category: 'Test'
+                value: 99,
+                currency: 'EUR',
+                content_name: 'Test Astrology Reading',
+                content_category: 'Consultation Inquiry',
+                content_type: 'product'
+              }, {
+                eventID: 'test-' + Date.now()
               });
-              console.log('✅ Test Lead event fired!');
+              console.log('✅ Test Lead event fired with value: €99');
               console.log('Check Facebook Events Manager to see if it appears.');
             };
           } else {
