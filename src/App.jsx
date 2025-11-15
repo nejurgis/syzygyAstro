@@ -321,7 +321,9 @@ function App() {
                 className={`dot ${index === currentTestimonial ? 'active' : ''}`}
                 onClick={() => setCurrentTestimonial(index)}
                 aria-label={`Go to testimonial ${index + 1}`}
-              />
+              >
+                <span className="sr-only">Go to testimonial {index + 1}</span>
+              </button>
             ))}
           </div>
         </div>
