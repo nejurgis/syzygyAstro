@@ -141,10 +141,15 @@
     <!-- Defer analytics to after page load for better performance -->
   </head>
   <body>
+    <div style="font-family: 'Zalando Sans SemiExpanded', sans-serif; max-width: 800px; margin: 100px auto; padding: 40px; text-align: center;">
+      <h1 style="font-size: 3em; margin-bottom: 20px; color: #333;">Under Construction</h1>
+      <p style="font-size: 1.2em; color: #666;">This site is currently being updated. Please check back soon!</p>
+    </div>
+
+    <!--
     <noscript>
       <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=815934864526504&ev=PageView&noscript=1" />
 
-      <!-- Fallback content for crawlers and no-JS users -->
       <div style="font-family: sans-serif; max-width: 800px; margin: 0 auto; padding: 20px;">
         <h1>Astrology Readings in Bali and beyond</h1>
         <p>Explore your birth chart • Discover patterns in your relationships & life path • Find clarity through time tested techniques</p>
@@ -166,7 +171,6 @@
       </div>
     </noscript>
 
-    <!-- Hidden form for Netlify Forms detection -->
     <form name="booking" netlify netlify-honeypot="bot-field" hidden>
       <input type="text" name="firstName" />
       <input type="text" name="lastName" />
@@ -181,7 +185,9 @@
 
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
-    <!-- Load analytics after page is fully loaded for better performance -->
+    -->
+
+    <!--
     <script>
       // Initialize Google Analytics early (before page load)
       window.dataLayer = window.dataLayer || [];
@@ -286,5 +292,6 @@
         }, 2000);
       });
     </script>
+    -->
   </body>
 </html>
